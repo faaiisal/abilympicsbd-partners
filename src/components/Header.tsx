@@ -10,12 +10,12 @@ const links = [
   ["About", "#about"],
   // ["Metz 2023", "#journey"],
   ["Helsinki 2027", "#helsinki2027"],
-  // ["Champions", "#champions"],
+  ["Champions", "#champions"],
   ["Partnerships", "#partners"],
   ["Gallery", "#gallery"],
   ["Media", "#media"],
-  // ["FAQ", "#faq"],
-  ["Contact", "#contact"],
+  ["FAQ", "#faq"],
+  // ["Contact", "#contact"],
 ];
 
 export function Header() {
@@ -81,9 +81,11 @@ export function Header() {
           type="button"
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-lime-300 text-2xl font-bold text-slate-950 shadow-lg transition-transform hover:scale-105 focus-visible:outline-brand-green"
+          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-gradient-to-tr from-[#005a40] via-brand-green to-emerald-400 text-white shadow-lg shadow-emerald-950/40 transition-all duration-200 hover:scale-105 focus-visible:outline-2 focus-visible:outline-emerald-400 focus-visible:outline-offset-2"
         >
-          <span aria-hidden="true">⌃</span>
+          <svg aria-hidden="true" className="h-5 w-5" fill="none" viewBox="0 0 24 24">
+            <path d="m6 14 6-6 6 6" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+          </svg>
         </button>
       ) : null}
     </>

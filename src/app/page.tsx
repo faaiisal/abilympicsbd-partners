@@ -1,13 +1,8 @@
 import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
-import { Events } from "@/components/Events";
-import { Footer } from "@/components/Footer";
-import { Gallery } from "@/components/Gallery";
+import { CredibilityStats } from "@/components/CredibilityStats";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Media } from "@/components/Media";
-import { Participants } from "@/components/Participants";
-import { Partners } from "@/components/Partners";
+import { MetzJourney } from "@/components/MetzJourney";
 
 export default function Home() {
   return (
@@ -15,15 +10,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <CredibilityStats />
         <About />
-        <Events />
-        <Participants />
-        <Media />
-        <Gallery />
-        <Partners />
-        <Contact />
+        <MetzJourney />
       </main>
-      <Footer />
     </>
   );
 }

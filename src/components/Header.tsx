@@ -1,21 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { tickerItems } from "@/content";
 import { AccessibilityBar } from "./AccessibilityBar";
 
 const links = [
   ["About", "#about"],
-  ["Metz 2023", "#journey"],
+  // ["Metz 2023", "#journey"],
   ["Helsinki 2027", "#helsinki2027"],
-  ["Champions", "#champions"],
+  // ["Champions", "#champions"],
   ["Partnerships", "#partners"],
   ["Gallery", "#gallery"],
   ["Media", "#media"],
-  ["FAQ", "#faq"],
+  // ["FAQ", "#faq"],
   ["Contact", "#contact"],
 ];
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 96);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <>
       <AccessibilityBar />
@@ -29,7 +45,7 @@ export function Header() {
           </div>
         </div>
       </aside>
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <header className={`${isScrolled ? "fixed inset-x-0 top-0 z-50 shadow-sm" : "relative"} border-b border-slate-200 bg-white/95 backdrop-blur transition-shadow duration-200`}>
         <div className="container-site flex min-h-20 items-center justify-between gap-4">
           <Link href="/" className="flex shrink-0 items-center gap-3 rounded-lg p-1" aria-label="Abilympics Bangladesh home">
             <Image src="/images/brand/abilympics-logo.png" alt="" width={52} height={52} priority className="h-12 w-12 object-contain" />
@@ -59,6 +75,17 @@ export function Header() {
           </div>
         </div>
       </header>
+      {isScrolled ? <div aria-hidden="true" className="h-20" /> : null}
+      {isScrolled ? (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-lime-300 text-2xl font-bold text-slate-950 shadow-lg transition-transform hover:scale-105 focus-visible:outline-brand-green"
+        >
+          <span aria-hidden="true">⌃</span>
+        </button>
+      ) : null}
     </>
   );
 }

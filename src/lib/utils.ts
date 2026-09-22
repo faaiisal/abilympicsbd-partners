@@ -1,17 +1,19 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
 /**
- * Merge Tailwind CSS class names safely, resolving conflicts.
- * Wraps clsx + tailwind-merge for use across all components.
+ * Merge class names, filtering out falsy values.
+ * Zero-dependency implementation — sufficient for this project since all
+ * class inputs are controlled and there are no complex Tailwind conflicts.
+ *
+ * Usage: cn("base-class", condition && "conditional-class", variant)
  */
-export function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
+export function cn(
+  ...inputs: (string | undefined | null | false | 0)[]
+): string {
+  return inputs.filter(Boolean).join(" ");
 }
 
 /**
  * Format a countdown to a target ISO date string.
- * Returns { days, hours, minutes, seconds } or null if date has passed.
+ * Returns { days, hours, minutes, seconds } or null if the date has passed.
  */
 export function getCountdown(isoTarget: string): {
   days: number;

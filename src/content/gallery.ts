@@ -153,7 +153,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: "gallery-09",
-    src: "/images/gallery/gallery-09.webp",
+    src: "/images/gallery/gallery-09webp.webp",
     alt: "Abilympics Bangladesh 2023 documentary photograph",
     caption: "Metz 2023 • Documentary Archive",
     category: "metz",

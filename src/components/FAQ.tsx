@@ -9,16 +9,18 @@ export function FAQ() {
       className="scroll-mt-24 bg-slate-50 py-20 lg:py-28"
     >
       <div className="container-site">
-        <SectionHeading
-          eyebrow="Frequently asked questions"
-          title="The details behind the journey."
-          description="Find answers to common questions about Abilympics, Bangladesh’s delegation and partnership."
-        />
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionHeading
+            eyebrow="Frequently asked questions"
+            title="The details behind the journey."
+            description="Find answers to common questions about Abilympics, Bangladesh’s delegation and partnership."
+          />
+        </div>
         <h2 id="faq-title" className="sr-only">
           Frequently asked questions about Abilympics Bangladesh
         </h2>
 
-        <div className="mt-12 max-w-4xl divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
+        <div className="mx-auto mt-12 max-w-4xl divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
           {faqItems.map((item) => (
             <details key={item.id} className="group p-5 first:rounded-t-2xl last:rounded-b-2xl sm:p-6">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left font-heading text-lg font-bold text-brand-slate marker:hidden [&::-webkit-details-marker]:hidden">

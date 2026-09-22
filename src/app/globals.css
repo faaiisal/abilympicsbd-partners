@@ -72,6 +72,14 @@
     max-width: 100%;
   }
 
+  html.large-text {
+    font-size: 118%;
+  }
+
+  html.high-contrast {
+    filter: contrast(1.15);
+  }
+
   /* Root */
   html {
     /* Smooth scroll — disabled when user prefers reduced motion */
@@ -217,5 +225,48 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
+  }
+
+  .gallery-reveal {
+    animation: gallery-reveal 420ms ease-out both;
+  }
+
+  .animate-marquee {
+    animation: marquee 38s linear infinite;
+  }
+
+  .animate-marquee:hover,
+  .animate-marquee:focus-within {
+    animation-play-state: paused;
+  }
+
+  @keyframes gallery-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-reveal {
+      animation: none;
+    }
+
+    .animate-marquee {
+      animation: none;
+    }
   }
 }

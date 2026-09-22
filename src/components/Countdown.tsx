@@ -29,18 +29,16 @@ export function Countdown({ target }: { target: string }) {
       : `${values.map(({ value, label }) => `${value} ${label}`).join(", ")} until the Helsinki 2027 opening ceremony.`;
 
   return (
-    <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
-      <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-300">Countdown to opening ceremony</p>
+    <div>
       <p className="sr-only" aria-live="polite" aria-atomic="true">{announcement}</p>
-      <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        {values.map(({ label, value }) => (
-          <div key={label} className="rounded-xl bg-black/20 p-4 text-center">
-            <p aria-hidden="true" className="min-h-11 font-heading text-3xl font-extrabold tabular-nums sm:text-4xl">{value}</p>
-            <p className="mt-1 text-xs uppercase tracking-widest text-slate-300">{label}</p>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
+        {values.map(({ label, value }, index) => (
+          <div key={label} className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl">
+            <p aria-hidden="true" className={`min-h-16 font-heading text-4xl font-black tabular-nums sm:text-6xl ${index === 3 ? "text-emerald-400" : "text-white"}`}>{value}</p>
+            <p className={`mt-1 text-xs font-extrabold uppercase tracking-wider ${index === 3 ? "text-slate-400" : "text-sky-300"}`}>{label}</p>
           </div>
         ))}
       </div>
-      <p className="mt-5 text-sm text-slate-300">Opening ceremony: 10 May 2027, 09:00 Helsinki time.</p>
     </div>
   );
 }

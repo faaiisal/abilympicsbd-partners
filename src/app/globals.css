@@ -1,26 +1,221 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================================
+   DESIGN TOKENS — Abilympics Bangladesh Partners
+   Source: Approved Stitch design (Demo-A)
+   Do not modify without design approval.
+   ============================================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --- Brand: Bangladesh Green --- */
+  --color-brand-green:       #006A4E;
+  --color-brand-green-dark:  #004D39;
+  --color-brand-green-light: #0A8764;
+  --color-brand-forest:      #0D5C43;
+
+  /* --- Brand: Bangladesh Red --- */
+  --color-brand-red:         #E11D48;
+  --color-brand-red-dark:    #BE123C;
+
+  /* --- Brand: Nordic / Helsinki Blue --- */
+  --color-brand-ice:         #0284C7;
+  --color-brand-ice-light:   #E0F2FE;
+  --color-brand-nordic-sky:  #38BDF8;
+
+  /* --- Brand: Dark Surfaces --- */
+  --color-brand-slate:       #0F172A;
+  --color-brand-charcoal:    #0B0F15;
+  --color-brand-surface:     #101419;
+
+  /* --- Typography --- */
+  --font-sans:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-plus-jakarta-sans), var(--font-inter), ui-sans-serif, sans-serif;
+
+  /* --- Container widths --- */
+  --container-xs:  480px;
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+
+  /* --- Border radius --- */
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* --- Shadows (used sparingly) --- */
+  --shadow-card:   0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-raised: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-glow-green: 0 0 24px 0 rgb(0 106 78 / 0.30);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+
+@layer base {
+  /* Box model */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Prevent horizontal overflow */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Root */
+  html {
+    /* Smooth scroll — disabled when user prefers reduced motion */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    tab-size: 4;
+  }
+
+  /* Honour reduced-motion at the root level */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Body defaults */
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: var(--color-brand-slate);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Heading defaults — use heading font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-brand-slate);
+  }
+
+  /* Accessible focus styles — visible for all interactive elements */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-green);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Remove default focus ring for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Text selection */
+  ::selection {
+    background-color: var(--color-brand-green);
+    color: #ffffff;
+  }
+
+  /* Improved link defaults */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Remove list styling from lists with role="list" (screen-reader UX) */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Media defaults */
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Form element font inheritance */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* Avoid text overflows */
+  p,
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   GLOBAL LAYOUT UTILITIES
+   ============================================================ */
+
+@layer utilities {
+  /* Centered max-width container */
+  .container-site {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin-inline: auto;
+    padding-inline: 1.25rem; /* 20px */
+  }
+
+  @media (min-width: 640px) {
+    .container-site {
+      padding-inline: 2rem; /* 32px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-site {
+      padding-inline: 3rem; /* 48px */
+    }
+  }
+
+  /* Font family utilities */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  /* Visually hidden (accessible hide) */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 }

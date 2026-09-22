@@ -128,3 +128,6 @@ ehthumbs.db
 
 # Private development notes
 /docs/private/
+
+# Local design references
+/docs/design/

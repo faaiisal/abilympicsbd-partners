@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Abilympics Bangladesh — Helsinki 2027 Official Campaign Platform</title>
+<!-- Tailwind CSS v3 with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bd-green': '#006a4e',
+            'bd-green-dark': '#004d38',
+            'bd-green-light': '#008b66',
+            'bd-red': '#f42a41',
+            'finland-blue': '#003580',
+            'nordic-ice': '#e8f1f8',
+            'nordic-dark': '#0b1118',
+            'surface-dark': '#131b24',
+            'surface-card': '#1a2330'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-mobile-adjustments">
+    /* Prevent accidental horizontal overflow on mobile viewports */
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Touch optimization */
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
+    }
+
+    /* Accessibility high-contrast mode */
+    body.high-contrast {
+      filter: contrast(125%);
+    }
+    body.high-contrast * {
+      border-color: #ffffff !important;
+    }
+
+    /* Custom Hide Scrollbar for horizontal scrolling lists */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-bd-green selection:text-white pb-safe">
+<!-- BEGIN: StickyTopBarAndHeader -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm" data-purpose="mobile-header">
+<!-- Top Announcement Bar with Accessibility Controls -->
+<div class="bg-slate-900 text-white px-3 py-1.5 flex items-center justify-between text-xs font-medium border-b border-slate-800">
+<div class="flex items-center space-x-1.5 truncate">
+<span class="inline-block w-2 h-2 rounded-full bg-bd-red animate-pulse"></span>
+<span class="truncate tracking-wide">Road to Helsinki • May 2027</span>
+</div>
+<!-- Accessibility Quick Controls -->
+<div class="flex items-center space-x-2 shrink-0" data-purpose="accessibility-controls">
+<button aria-label="Decrease text size" class="px-1.5 py-0.5 rounded bg-slate-800 text-[11px] hover:bg-slate-700 active:scale-95" id="btn-font-decrease">A-</button>
+<button aria-label="Increase text size" class="px-1.5 py-0.5 rounded bg-slate-800 text-[11px] font-bold hover:bg-slate-700 active:scale-95" id="btn-font-increase">A+</button>
+<button aria-label="Toggle High Contrast" class="p-1 rounded bg-slate-800 hover:bg-slate-700 active:scale-95" id="btn-contrast-toggle">
+<svg class="w-3 h-3 text-amber-300" fill="currentColor" viewbox="0 0 20 20">
+<path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 14.93V3.07a7 7 0 010 13.86z"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="px-4 py-2.5 flex items-center justify-between">
+<!-- Logo Container -->
+<a class="flex items-center space-x-2.5 focus:outline-none focus:ring-2 focus:ring-bd-green rounded-lg" href="#">
+<img alt="Abilympics Bangladesh 2027 Helsinki Official Logo" class="h-11 w-11 object-contain drop-shadow-sm" height="44" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvSUNgxXrxQuej1DKzQnqFGy1iosPf5F0vaeD8c1FC3MphvH-yCjC_rfYHKcoaYYAHoFk23M9YLQH_B2SZdTOsSMRmLXPvvRhiMFb9NISO10BlHFNglvRSfdyB1wH5hn5VjsEC3L92iY3NB_H0rWlZphoSIGJdoSMPu4jXkdMiCr86x_nfg86Ojrx75SUyAfvU-SKhmiq-t1GFEgvNrLyiFqhNO-3IOXy97RMLUYOq6LcuBsys5FLT" width="44"/>
+<div class="flex flex-col">
+<span class="text-xs font-black tracking-tight text-slate-900 leading-tight uppercase">Abilympics</span>
+<span class="text-[10px] font-bold tracking-widest text-bd-green leading-none uppercase">Bangladesh</span>
+</div>
+</a>
+<!-- Quick Action Buttons -->
+<div class="flex items-center space-x-2">
+<a class="touch-target inline-flex items-center justify-center px-3 py-2 text-xs font-bold uppercase tracking-wider rounded-lg bg-bd-green hover:bg-bd-green-dark text-white shadow-sm shadow-bd-green/30 active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+          Partner
+        </a>
+<!-- Mobile Menu Hamburger Button -->
+<button aria-expanded="false" aria-label="Toggle navigation drawer" class="touch-target p-2 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-bd-green active:scale-95" id="mobile-menu-btn">
+<svg class="w-6 h-6" fill="none" id="menu-icon-open" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg class="w-6 h-6 hidden text-bd-red" fill="none" id="menu-icon-close" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Mobile Slide-out Menu Overlay -->
+<nav class="hidden bg-white border-b border-gray-200 shadow-xl px-5 pt-3 pb-6 space-y-3 transition-all" id="mobile-drawer">
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#about">About Abilympics</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#metz-retrospective">Metz 2023 Historic Debut</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#countdown">Helsinki 2027 Countdown</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#champions">Meet The Champions</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#partnerships">Partnership Opportunities</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#gallery">Documentary Gallery</a>
+<a class="mobile-nav-link block text-sm font-semibold text-gray-800 hover:text-bd-green py-2 border-b border-gray-100" href="#faq">Frequently Asked Questions</a>
+<div class="pt-2">
+<a class="w-full touch-target flex items-center justify-center font-bold text-sm text-white bg-bd-green hover:bg-bd-green-dark rounded-xl py-3 shadow-md shadow-bd-green/20" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+          Become a Partner Now
+        </a>
+</div>
+</nav>
+</header>
+<!-- END: StickyTopBarAndHeader -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative bg-nordic-dark text-white overflow-hidden" data-purpose="cinematic-hero">
+<!-- Background Hero Image with Deep Contrast Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Bangladeshi Abilympics delegate carrying national flag with immense pride" class="w-full h-full object-cover object-center opacity-40 scale-105 filter brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEO1TKOM_qlv1fAOpsT8p2UyVfsTc333kz6prPdBtysP7LIODYV9MBUPhjHke6gqMv_123kCV6KAfvUHsH5CsfyvIUsOM3h9oWxUfPxdT5w5XjU_8Cng_K2A7cLxqK1MCkJTKbyJfTRBOizUBRSKnXhXQWJW-Wl0bKFtNSJepurM553GsPrhahnm1c0q4JQEGgn8qGJBd2C3Uqs97kPmvuofBwFNPDSfc69MwsOE8fPym2wGQlKlIP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-nordic-dark via-nordic-dark/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-nordic-dark/95 via-nordic-dark/60 to-nordic-dark/95"></div>
+</div>
+<!-- Hero Mobile Content Container -->
+<div class="relative z-10 px-5 pt-8 pb-10 flex flex-col justify-end">
+<!-- Pill Badge -->
+<div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-bd-green/30 border border-bd-green/60 backdrop-blur-md self-start mb-4">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+<span class="text-xs font-semibold text-emerald-300 tracking-wide uppercase">Road to Helsinki 2027</span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-3xl sm:text-4xl font-black tracking-tight leading-[1.15] text-white drop-shadow-md mb-3">
+          Bangladesh to the <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-200 to-white">Global Stage.</span>
+</h1>
+<!-- Brand Statement / Tagline -->
+<p class="text-sm font-semibold text-emerald-400/95 tracking-wide uppercase mb-2">
+          Empowering Ability. Inspiring Excellence. Representing Bangladesh.
+        </p>
+<!-- Descriptive Paragraph -->
+<p class="text-sm text-slate-300 leading-relaxed mb-6 font-normal">
+          Following our historic 2-medal debut at Metz 2023, Team Bangladesh is preparing for the world’s premier vocational championship at Abilympics Helsinki 2027.
+        </p>
+<!-- Mobile CTAs -->
+<div class="flex flex-col space-y-3" data-purpose="hero-actions">
+<a class="touch-target w-full inline-flex items-center justify-center font-bold text-sm tracking-wider uppercase px-6 py-3.5 rounded-xl bg-bd-green hover:bg-bd-green-dark text-white shadow-lg shadow-bd-green/40 active:scale-[0.98] transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+<span>Become a Partner</span>
+<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+<a class="touch-target w-full inline-flex items-center justify-center font-semibold text-sm tracking-wide text-slate-200 bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-md px-6 py-3.5 rounded-xl active:scale-[0.98] transition-all" href="#metz-retrospective">
+            Explore the Journey
+          </a>
+</div>
+<!-- Event Location Strip -->
+<div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+<span class="flex items-center">
+<svg class="w-3.5 h-3.5 mr-1 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Messukeskus, Helsinki
+          </span>
+<span class="font-medium text-slate-300">10–13 May 2027</span>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: QuickStatsSection -->
+<section class="bg-slate-900 border-b border-slate-800 text-white px-5 py-6" data-purpose="credibility-stats">
+<div class="grid grid-cols-2 gap-3">
+<!-- Stat Item 1 -->
+<div class="bg-slate-800/80 rounded-xl p-3.5 border border-slate-700/60 flex flex-col justify-center">
+<div class="text-3xl font-black text-white tracking-tight">7</div>
+<div class="text-xs font-semibold text-emerald-400 uppercase mt-0.5">Competitors</div>
+<div class="text-[11px] text-slate-400 mt-1 leading-snug">Metz 2023 Historic Cohort</div>
+</div>
+<!-- Stat Item 2 -->
+<div class="bg-slate-800/80 rounded-xl p-3.5 border border-slate-700/60 flex flex-col justify-center">
+<div class="text-3xl font-black text-amber-400 tracking-tight">2</div>
+<div class="text-xs font-semibold text-amber-400 uppercase mt-0.5">Medals Won</div>
+<div class="text-[11px] text-slate-400 mt-1 leading-snug">Bronze in Global Finals</div>
+</div>
+<!-- Stat Item 3 -->
+<div class="bg-slate-800/80 rounded-xl p-3.5 border border-slate-700/60 flex flex-col justify-center">
+<div class="text-3xl font-black text-white tracking-tight">43+</div>
+<div class="text-xs font-semibold text-emerald-400 uppercase mt-0.5">Skill Trades</div>
+<div class="text-[11px] text-slate-400 mt-1 leading-snug">Competitions at Helsinki</div>
+</div>
+<!-- Stat Item 4 -->
+<div class="bg-slate-800/80 rounded-xl p-3.5 border border-slate-700/60 flex flex-col justify-center">
+<div class="text-3xl font-black text-emerald-400 tracking-tight">100%</div>
+<div class="text-xs font-semibold text-emerald-400 uppercase mt-0.5">Inclusion Focus</div>
+<div class="text-[11px] text-slate-400 mt-1 leading-snug">Global Standards Tested</div>
+</div>
+</div>
+</section>
+<!-- END: QuickStatsSection -->
+<!-- BEGIN: AboutAbilympics -->
+<section class="px-5 py-9 bg-white" data-purpose="about-section" id="about">
+<!-- Category Badge -->
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-2">Global Vocational Excellence</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight leading-snug mb-3">
+        Where Ability Takes Center Stage.
+      </h2>
+<p class="text-sm text-slate-600 leading-relaxed mb-5">
+        Abilympics is the premier quadrennial world skills championship for persons with disabilities. Certified vocational specialists, engineers, programmers, designers, and artisans gather to demonstrate world-class capabilities across high-demand technical trades.
+      </p>
+<!-- Featured Image Card -->
+<div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm mb-5 bg-slate-900 relative">
+<img alt="Bangladeshi candidate participating at the 10th International Abilympics in Metz" class="w-full h-56 object-cover object-center" height="400" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXYn5-poue6g7D5nw2XtdXFTgiHXAB5Z8pZc9hDLegKbdcHCQjyJG0Mviey57rrsSFXfvk65lKJshP-CkrtsjLqxffDxA-hVQMAxdUc3Qc7cloEMcODX1v9XZi8bBCLIYFGqgHYViZL0bBmKXM1Kp2zawjxwODsZAzYwsDzNNcRe9Gd7sd8pesL1JrjxAjMFeY9f_omEPSWJUb6NVyhqF_cxA2ZO8D_PyZPEA_yu1EIlN1uCgOxGuj" width="600"/>
+<div class="absolute bottom-0 inset-x-0 p-3 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent text-white text-xs">
+<p class="font-semibold text-emerald-300">10th International Abilympics • Metz, France</p>
+<p class="text-[11px] text-slate-300">Word Processing &amp; Technical Documentation Task</p>
+</div>
+</div>
+<!-- Key Focus Points -->
+<div class="space-y-3">
+<div class="flex items-start space-x-3 p-3.5 bg-slate-50 border border-slate-100 rounded-xl">
+<div class="w-8 h-8 rounded-lg bg-bd-green/10 text-bd-green flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900">Rigorous Standards</h3>
+<p class="text-xs text-slate-600 mt-0.5">Competitions benchmarked to industrial criteria matching the highest world standards.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3 p-3.5 bg-slate-50 border border-slate-100 rounded-xl">
+<div class="w-8 h-8 rounded-lg bg-finland-blue/10 text-finland-blue flex items-center justify-center shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900">Global Inclusion Movement</h3>
+<p class="text-xs text-slate-600 mt-0.5">Breaking stereotypes by providing equal economic pathways for youths with disabilities.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutAbilympics -->
+<!-- BEGIN: MetzRetrospective -->
+<section class="px-5 py-9 bg-slate-100 border-y border-gray-200" data-purpose="metz-history" id="metz-retrospective">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-red bg-red-100 text-bd-red px-2.5 py-1 rounded-md inline-block mb-2">Historic Milestone</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight leading-snug mb-2">
+        Our Journey Started In Metz.
+      </h2>
+<p class="text-xs text-slate-600 leading-relaxed mb-5">
+        In March 2023, the red and green flag of Bangladesh flew proudly at the 10th International Abilympics in Metz, France. Organized through CSID and United Action, an inspired delegation achieved unprecedented glory.
+      </p>
+<!-- Timeline Card 1: Historic Debut -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 mb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2.5 py-1 bg-slate-900 text-white rounded-md text-[10px] font-extrabold uppercase tracking-wide">Metz 2023</span>
+<span class="text-[11px] font-semibold text-emerald-700">Historic Completed Milestone</span>
+</div>
+<h3 class="text-base font-black text-slate-900 mb-1">The Historic Debut</h3>
+<p class="text-xs text-slate-600 mb-3">A dedicated 10-member official delegation with 7 competitors entered international vocational scrutiny, bringing home two medals for the nation.</p>
+<ul class="text-xs space-y-1.5 text-slate-700 mb-4">
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-bd-green mr-2"></span>
+            7 Talented Competitors in Word Processing &amp; ICT
+          </li>
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-2"></span>
+<strong>2 International Medals Won</strong> on the Global Podium
+          </li>
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-bd-green mr-2"></span>
+            First formal inclusion of Bangladesh at the IAF level
+          </li>
+</ul>
+<!-- Delegation Airport Photo -->
+<div class="rounded-xl overflow-hidden border border-gray-100">
+<img alt="Bangladesh Abilympics Delegation at Airport holding banner" class="w-full h-44 object-cover object-center" height="340" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6RpNtfOGrQBJVWTiyLsz_Czoq-KH08mqus4NYGHEZcTyzzwYzg9hNnEqAfW-_OtOksdtPJYsvjfbqrvnNvXEwZqGuegfPTYYlgsHWIqxYgkzYp02F6mnSJYJL9M4fLOVw2H2706_oBiFb0P9ppo-VfdnPh5ghLboXoXjpBBOiQl2W-EKL1WTvmXwvDgAccpiDccHAGaTFSffIo3-nGCYRwOKtBnSuAB7LxqkUN4-lfeMQQ65R7AO2" width="600"/>
+<div class="bg-slate-50 p-2 text-[10px] text-slate-500 font-medium text-center">
+            Official Contingent Departure organized by CSID &amp; United Action
+          </div>
+</div>
+</div>
+<!-- Timeline Card 2: Medal Achievement Spotlight -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-amber-200 bg-gradient-to-b from-amber-50/50 to-white mb-4">
+<div class="flex items-center space-x-2 mb-2">
+<span class="p-1 rounded bg-amber-400 text-white">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2l2.4 5 5.5.8-4 3.9.9 5.5-4.8-2.6L5.2 17l1-5.5-4-3.9 5.5-.8L10 2z" fill-rule="evenodd"></path>
+</svg>
+</span>
+<span class="text-xs font-black uppercase tracking-wider text-amber-900">Podium Victory</span>
+</div>
+<h3 class="text-base font-black text-slate-900 mb-1">2 International Medals</h3>
+<p class="text-xs text-slate-600 mb-3">
+          Bangladesh proved its vocational capabilities on the highest stage, competing alongside 30+ powerhouse nations.
+        </p>
+<!-- Medal Winner Photo -->
+<div class="rounded-xl overflow-hidden border border-amber-100">
+<img alt="Delegation members proudly showing Abilympics medals in Metz" class="w-full h-48 object-cover object-top" height="500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMzdjyQUxmUg4i8AWxsKbZQR9Xnv-dD2gZB6mKaLdKgHQJOishE3FoEexbAl_koIvxqjZ8dpSHX4dw9MhC11Oq18EtpaTbfXH8VljI_XiMQKA7Bzk0PHoz61JJg0i2wgvWWAg4f14Qs3KMTcsl9BNuFYoV2tJwMiNudlRBU7l8DNgyWKl2zWux14583dkpEGWNwaC8G_H_5l5J_kwFrSNGH2xsXjSgedDQPO4_ZgD0OVBHCRBO71AI" width="500"/>
+<div class="bg-amber-100/70 p-2 text-[11px] text-amber-950 font-bold text-center">
+            Bronze Medal Achievement Celebrated in Metz, France
+          </div>
+</div>
+</div>
+<!-- Timeline Card 3: Looking Forward to Helsinki -->
+<div class="bg-slate-900 text-white rounded-2xl p-4 shadow-sm border border-slate-800">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2.5 py-1 bg-bd-green text-white rounded-md text-[10px] font-extrabold uppercase tracking-wide">Helsinki 2027</span>
+<span class="text-[11px] font-semibold text-emerald-400">Present • Upcoming Goal</span>
+</div>
+<h3 class="text-base font-black text-white mb-1">The Global Stage Awaits</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-3">
+          Scaling nationwide candidate scouting, intensive bootcamp preparation, and corporate alliances to represent Bangladesh across 43 specialized trades.
+        </p>
+<div class="grid grid-cols-2 gap-2 text-[11px] text-slate-200">
+<div class="p-2 rounded bg-slate-800/80 border border-slate-700">✓ Expanded national squad</div>
+<div class="p-2 rounded bg-slate-800/80 border border-slate-700">✓ Modern training labs</div>
+<div class="p-2 rounded bg-slate-800/80 border border-slate-700">✓ International mentorship</div>
+<div class="p-2 rounded bg-slate-800/80 border border-slate-700">✓ Multi-category podiums</div>
+</div>
+</div>
+</section>
+<!-- END: MetzRetrospective -->
+<!-- BEGIN: CountdownSection -->
+<section class="px-5 py-9 bg-nordic-dark text-white text-center" data-purpose="helsinki-countdown" id="countdown">
+<div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-finland-blue/30 border border-finland-blue/60 text-[10px] font-bold tracking-widest text-sky-300 uppercase mb-3">
+<span>Official Countdown to Opening Ceremony</span>
+</div>
+<h2 class="text-2xl font-black tracking-tight text-white mb-1">
+        Abilympics Helsinki 2027
+      </h2>
+<p class="text-xs text-slate-400 font-medium mb-6">
+        10–13 May 2027 • Messukeskus National Exhibition and Convention Centre, Finland
+      </p>
+<!-- 4-Block Mobile Countdown -->
+<div class="grid grid-cols-4 gap-2 max-w-xs mx-auto mb-6" data-purpose="countdown-clock">
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-2.5">
+<span class="block text-2xl font-black text-white" id="timer-days">230</span>
+<span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Days</span>
+</div>
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-2.5">
+<span class="block text-2xl font-black text-white" id="timer-hours">12</span>
+<span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Hours</span>
+</div>
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-2.5">
+<span class="block text-2xl font-black text-white" id="timer-minutes">38</span>
+<span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Mins</span>
+</div>
+<div class="bg-surface-dark border border-slate-800 rounded-xl p-2.5">
+<span class="block text-2xl font-black text-emerald-400" id="timer-seconds">42</span>
+<span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider">Secs</span>
+</div>
+</div>
+<p class="text-xs text-slate-300 italic mb-5">
+        "The world is waiting. Bangladesh is preparing."
+      </p>
+<a class="touch-target inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl bg-bd-green hover:bg-bd-green-dark text-white shadow-lg shadow-bd-green/30 active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+        Become a Partner
+      </a>
+</section>
+<!-- END: CountdownSection -->
+<!-- BEGIN: MeetChampions -->
+<section class="px-5 py-9 bg-white" data-purpose="champion-spotlights" id="champions">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-1.5">Participant Spotlights</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Meet the Champions</h2>
+<p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Dedicated professionals proving vocational mastery and breaking stereotypes on the world stage.</p>
+</div>
+<!-- Champion Card 1: Joshim -->
+<div class="bg-slate-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm mb-6">
+<div class="relative bg-amber-50">
+<img alt="Joshim - Abilympics Candidate for Professional Photography &amp; Craftsmanship" class="w-full h-72 object-contain object-center p-2" height="500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpmc3_Af11XYuS1EB2U6X_jMPzKq-MTNj-6FC4YoREivSOWmsaUbe1czDFDKfZVYjy-5GNJmO1tthHjFBcHFzZNU4wyQCiYNVHvw9c_DBbLgAC1ITzthe7d9RLWZ182T390dOWJ80BVEFwvWYPYsiKUCEG5jEX4D8gQACBgLKH0b1Vlz2CpixTljdl7sgae7sJaXomLbD9-MtSxTvD1wkDWKS4OGDHnVr9Ep95V4LAxaXgTPxa3J4H" width="400"/>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-bd-green bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Featured Candidate</span>
+<span class="text-xs font-semibold text-slate-400">Dhaka, Bangladesh</span>
+</div>
+<h3 class="text-lg font-black text-slate-900">Joshim</h3>
+<p class="text-xs font-bold text-bd-green mb-2">Professional Technology &amp; Digital Craftsmanship</p>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            A journey rooted in technical precision, continuous bootcamp training, and unyielding ambition. Joshim represents the next vanguard of Bangladesh digital talent preparing for rigorous international evaluation.
+          </p>
+<blockquote class="p-3 bg-white rounded-xl border-l-4 border-bd-green text-xs italic text-slate-700 mb-3">
+            "Disability is not the definition of a person’s future. Mastery in technical craft gives us an equal voice anywhere in the world."
+          </blockquote>
+<a class="inline-flex items-center text-xs font-bold text-bd-green hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            Sponsor Training for Joshim →
+          </a>
+</div>
+</div>
+<!-- Champion Card 2: Jerin -->
+<div class="bg-slate-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+<div class="relative bg-teal-50">
+<img alt="Jerin - Abilympics Candidate for Creative Media and Office Administration" class="w-full h-72 object-contain object-center p-2" height="500" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXHcRHArzj5AtPVMvjbQk4CyLtl8rL8_Ie9zql3DLGF-8agYCFE6UH-ki_4QWrdydd0-xbw3LLJP23vOo_XhNvTXPH-_sew3Jq--5euYYS1z1xulImW8stRiw-p0uSCyggpZLzBRN4LwDaKa9GC90yjcu_iuDbJeNTCIdMwUwwelLJiOhiakWlRsugYQD63ErY12HVgxznbliyoUp2U1RQapZbmn-P4MiqyNxf0IO1MZsk9XPql4zo" width="400"/>
+</div>
+<div class="p-4">
+<div class="flex items-center justify-between mb-1">
+<span class="text-[10px] font-extrabold uppercase tracking-wider text-teal-700 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">Featured Candidate</span>
+<span class="text-xs font-semibold text-slate-400">Bangladesh Cohort</span>
+</div>
+<h3 class="text-lg font-black text-slate-900">Jerin</h3>
+<p class="text-xs font-bold text-teal-700 mb-2">Creative Media, Office Administration &amp; Computing</p>
+<p class="text-xs text-slate-600 leading-relaxed mb-3">
+            Demonstrating exceptional speed, layout aesthetic, and error-free execution across advanced media production suites, Jerin is preparing relentlessly to uphold Bangladesh’s reputation in Helsinki.
+          </p>
+<blockquote class="p-3 bg-white rounded-xl border-l-4 border-teal-600 text-xs italic text-slate-700 mb-3">
+            "When you focus on skill, every challenge transforms into an obstacle defeated. Representing Bangladesh makes every hour of practice worthwhile."
+          </blockquote>
+<a class="inline-flex items-center text-xs font-bold text-teal-700 hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            Sponsor Training for Jerin →
+          </a>
+</div>
+</div>
+</section>
+<!-- END: MeetChampions -->
+<!-- BEGIN: InstitutionalCollaboration -->
+<section class="px-5 py-8 bg-slate-50 border-t border-gray-200" data-purpose="institutional-partnership">
+<div class="bg-white rounded-2xl p-4 border border-gray-200 shadow-sm">
+<span class="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">National Institutional Stewardship</span>
+<h3 class="text-lg font-black text-slate-900 mb-2">Building Opportunity Through Trusted Collaboration.</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Abilympics Bangladesh operates in close collaboration with the <strong>Centre for Services and Information on Disability (CSID)</strong>, United Action, and strategic development partners across Bangladesh.
+        </p>
+<!-- Institutional Image -->
+<div class="rounded-xl overflow-hidden mb-3 border border-gray-100">
+<img alt="Bangladeshi delegates with International Abilympics jury and technical leads" class="w-full h-44 object-cover object-center" height="340" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV2VPRlEJxa2oF-GKDZjs3hIi_PEGbL-_6Jc95Srzy19a0Q4woigTHidMQqB3zCu0dD7u_47T9poWLL-XXCaIPqw4LWXAKTIRbwkcwAiXGcHI6xIA-EB3PnyE2_BFJol1ZTl4J81vejP_wenAZJroipJisN1bSGmaxGBa2wcLhA6zj6SMeWlgW0BnECWvmzYaqrkR8BZEKNPJYv4a-ImFvysMZHFkeF7PIIqe4RXA0aQlvZnJiLW0F" width="600"/>
+<div class="p-2 bg-slate-900 text-white text-[10px]">
+            CSID and Bangladesh lead team collaborating with IAF Officials at the 10th Abilympics in Metz.
+          </div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[11px] font-medium text-slate-700 pt-1">
+<div class="flex items-center space-x-1">
+<span class="text-bd-green">✓</span>
+<span>Accredited Institutions</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="text-bd-green">✓</span>
+<span>Legal &amp; Trust Framework</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="text-bd-green">✓</span>
+<span>Equitable Inclusion</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="text-bd-green">✓</span>
+<span>Workplace Transition</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: InstitutionalCollaboration -->
+<!-- BEGIN: WhyPartnerSection -->
+<section class="px-5 py-9 bg-nordic-dark text-white" data-purpose="value-pillars" id="why-partner">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-1 rounded-md inline-block mb-1.5">Empowerment &amp; ESG Value Proposition</span>
+<h2 class="text-2xl font-black tracking-tight text-white">Why Partner With Abilympics Bangladesh?</h2>
+<p class="text-xs text-slate-400 mt-1 max-w-xs mx-auto">Your organization’s support directly propels Bangladesh youth to the world stage while realizing genuine Environmental, Social &amp; Governance (ESG) milestones.</p>
+</div>
+<!-- 4 High Impact Pillar Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<!-- Pillar 1 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800">
+<div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-2.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm font-bold text-white mb-1">Skills</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Fuel technical training that transforms disabled youth with market-leading talent into world-standard experts.</p>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800">
+<div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center mb-2.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm font-bold text-white mb-1">Opportunity</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Open doors to meaningful career pathways, global talent networks, and enterprise employment in tech and industry.</p>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800">
+<div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mb-2.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm font-bold text-white mb-1">Inclusion</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Show visible leadership on corporate inclusion and diversity, demonstrating tangible commitments to UN SDGs.</p>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800">
+<div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center mb-2.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm font-bold text-white mb-1">Representation</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Fly the red-and-green flag alongside 40+ nations, showing Bangladesh's vocational excellence on global media.</p>
+</div>
+</div>
+<!-- Support Areas Chips Grid -->
+<div class="bg-surface-card p-4 rounded-2xl border border-slate-800">
+<h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 text-center mb-3">Where Partnership Makes a Difference</h4>
+<div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Participant Preparation
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Training Hubs
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Travel &amp; Accommodations
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Equipment &amp; Tools
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Accessibility Support
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> AI &amp; Digital Skills
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Media &amp; Docs
+          </div>
+<div class="bg-slate-800/80 px-2.5 py-2 rounded-lg border border-slate-700/50 flex items-center">
+<span class="text-emerald-400 mr-1.5">✓</span> Global Logistics
+          </div>
+</div>
+</div>
+</section>
+<!-- END: WhyPartnerSection -->
+<!-- BEGIN: PartnershipTiers -->
+<section class="px-5 py-9 bg-slate-100" data-purpose="partnership-tiers" id="partnerships">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-1.5">Collaboration Packages</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Find Your Role in the Journey</h2>
+<p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Scalable partnership structures designed for brands, CSR funds, educational institutions, and tech pioneers.</p>
+</div>
+<div class="space-y-4">
+<!-- Tier 1: Official Partner -->
+<div class="bg-white rounded-2xl p-5 border-2 border-bd-green shadow-md relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-bd-green text-white text-[10px] font-black uppercase px-3 py-1 rounded-bl-lg">
+            Premier Inclusion
+          </div>
+<h3 class="text-lg font-black text-slate-900 mt-1">Official Partner</h3>
+<p class="text-xs text-slate-500 mb-3">Highest level title sponsor with comprehensive branding and primary recognition across the entire campaign lifecycle.</p>
+<ul class="text-xs text-slate-700 space-y-2 mb-4">
+<li class="flex items-center">
+<svg class="w-4 h-4 text-bd-green mr-2 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Primary logo on all delegation apparel in Finland
+            </li>
+<li class="flex items-center">
+<svg class="w-4 h-4 text-bd-green mr-2 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Keynote slot at national send-off events
+            </li>
+<li class="flex items-center">
+<svg class="w-4 h-4 text-bd-green mr-2 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              Documentary co-branding and executive interviews
+            </li>
+</ul>
+<a class="touch-target w-full inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider py-3 rounded-xl bg-bd-green hover:bg-bd-green-dark text-white active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            Become an Official Partner
+          </a>
+</div>
+<!-- Tier 2: Corporate Partner -->
+<div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
+<h3 class="text-base font-black text-slate-900">Corporate Partner</h3>
+<p class="text-xs text-slate-500 mb-3">Ideal for corporations committed to building strong, measurable ESG records and genuine disability inclusion benchmarks.</p>
+<ul class="text-xs text-slate-700 space-y-1.5 mb-4">
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+              Dedicated squad sponsorship &amp; recognition
+            </li>
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+              Dedicated press release &amp; joint feature
+            </li>
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+              Corporate social responsibility reporting assets
+            </li>
+</ul>
+<a class="touch-target w-full inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 text-slate-800 active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            Become a Partner
+          </a>
+</div>
+<!-- Tier 3: Technology Partner -->
+<div class="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm">
+<h3 class="text-base font-black text-slate-900">Technology Partner</h3>
+<p class="text-xs text-slate-500 mb-3">Support participants with modern laptops, hardware, AI workflows, assistive devices, and specialized licensed software.</p>
+<ul class="text-xs text-slate-700 space-y-1.5 mb-4">
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+              Hardware branding during tech bootcamps
+            </li>
+<li class="flex items-center">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400 mr-2"></span>
+              Showcased during trade trial exhibitions
+            </li>
+</ul>
+<a class="touch-target w-full inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 text-slate-800 active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            Become a Partner
+          </a>
+</div>
+<!-- Tier 4: Media & Supporting Partners -->
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white p-3.5 rounded-xl border border-gray-200 flex flex-col justify-between">
+<div>
+<h4 class="text-xs font-black text-slate-900">Media Partner</h4>
+<p class="text-[11px] text-slate-500 mt-1 leading-snug">Broadcast and press coverage reaching millions across Bangladesh.</p>
+</div>
+<a class="mt-3 text-[11px] font-bold text-bd-green hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Apply Now →</a>
+</div>
+<div class="bg-white p-3.5 rounded-xl border border-gray-200 flex flex-col justify-between">
+<div>
+<h4 class="text-xs font-black text-slate-900">Supporting Partner</h4>
+<p class="text-[11px] text-slate-500 mt-1 leading-snug">Flexible contributions for equipment, kits, and training camps.</p>
+</div>
+<a class="mt-3 text-[11px] font-bold text-bd-green hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Apply Now →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PartnershipTiers -->
+<!-- BEGIN: DocumentaryGallery -->
+<section class="px-5 py-9 bg-white" data-purpose="documentary-gallery" id="gallery">
+<div class="text-center mb-5">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-1">Authentic Visual Archive</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Documentary Gallery</h2>
+<p class="text-xs text-slate-500 mt-1">Captured moments from Metz 2023, workshops, and the road to Helsinki 2027.</p>
+</div>
+<!-- 2-Column Mobile Masonry / Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Gallery Item 1 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="Bangladeshi delegate waving national flag on stage" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABTgv37Ywrmj-E3j4gvkDLvX6civqVIXZGsTAWt5Dg1Z9Ph2npCNsaGE1h54yc95f3SgmZkiBpJa4kwMzBTYoepdE0RVwTyB3UssbyI1ehyhfzimRTzwbP2dGU6wXHruMmCbaOwn-X2OAA24mTyR6FrPiO0eh-9RSC8VLvmbVSJyZm2_ttVRFLD4jODUAqGMSJX7GL3Jabe8Ec7lzXq3Z0daD8v-KEWP47whd3OHshkFVbDMe3x6Yt" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Flag-Bearing Pride</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="South Asian Abilympics solidarity with flags" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC67UjPxvj7kNOAI6wOgGlATTzUzoeGFE5qp6N9xxZY72LuTHPiSGhPi5aZzjzZW26iZBJ1b9QCrZvAP-eZVmVQh8pDdEE4wDhkw9awuagC7PyDIknhzV7Bj4U1UiZuR2bKtC0Fe-CkPKfcAAFdI5Z6S0g7R9pV0wmNmqhCH_6WVd-c2N-Li-TWp9FvlUWQyb_sMQdFckxMIa1DjxwqgxmQ0XdX0ugqCRMFjnLRco0NEKlCXPjemE3C" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Global Camaraderie</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="Competitor working on high precision graphic workstation" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz9zgY2ev38D6yIdFokc-q4RGCWmaIpOfNTVQ_a-xcCaDfCKRWFS0ULoeurt_ev7BELw1hMJYZFeFJSx33XlFld_xBZ63E9OsbGlcKqUch9twIsKrXHw1l9K2vajxQbpAe70Qbh4f6pvY6sKBbMb-0nCauFIeKQxrbYDgALj1kHCblW_BGleGr2wKv83AeGiQKmN3lvfeDLJ66OGB3HEJSzT7Patfo-7VzCu3FWQOzaXIZatAJqIGl" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Design Trade Task</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="Competitor performing typing and word processing test" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZD042lPjN0tIG-RkCEwDJ9eQeIMbuNY0fzgN9mgPkS4ski1owQ-Sd75jRnp6llVT6KypW_YBetXVoyeDqZNq02W5bEKuJVy40KTSM5O4_zQ0UHRvXKPGdfnt4kaZ-7a5Tc3Y2ciYX5hpDi_NpRz-_n5BvzSvJDqBMt24f_3FUd7Gu1lrDbmg9vR1bxJgl_XCNm6fq8sNJ3V27nxq_vsFNtq2pr6YlppP51-pFoESTGYBC-k1hB-I8" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Word Processing</div>
+</div>
+<!-- Gallery Item 5 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="Team meeting with international officials in Metz" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9p0EeZnj2SOu-aN9XSWiI0gdQFL0fvkPawnHBJL347CaU1ZTt6YfWPfJo9CjpcECmBCNx2-eZub4tAgK1dp8H0ulNdSAa9jBNRPmWTqZpvXkclJGlysRcOsG-JaQg62V-P-FxDYbsMdKHApgxSFmJwc1Z5qDmtzT2IA5ABDOmu9L2wdwZfqoe_93RYH6mddG5wdUyIWgd1FXyQQDNA1dzqXnlSPoKfs5os4WuW8cL8uaUWmGkPMXv" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Technical Jury Review</div>
+</div>
+<!-- Gallery Item 6 -->
+<div class="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-slate-100 relative group">
+<img alt="Medal celebration in Metz" class="w-full h-40 object-cover object-center" height="300" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUneQvFcj0PTb35GWUmbv_eHhWIXCKtjbvc_YlhNrdbDwA-qsO28ssCyh68DcvTqUpB23OsqhiU_gB7YBe_LC0myY-6buGWgjwvpkv9Um--bsjOM0cCOtu6I91DJMxVfUcGafcBQg_tLjCvwgXUUN1lxcHQ0y-lGZ935-Kz4wS9HJidWpch6m_ZvLvwNOeCV4zjBq-aILaoY0xYlTXEuwRJ5fKYUet5CglxYyH4phBFqtcZC-7Cgb7" width="400"/>
+<div class="absolute bottom-0 inset-x-0 p-1.5 bg-gradient-to-t from-black/80 to-transparent text-[10px] text-white font-medium">Medal Victory</div>
+</div>
+</div>
+</section>
+<!-- END: DocumentaryGallery -->
+<!-- BEGIN: InTheMediaAndBroadcast -->
+<section class="px-5 py-9 bg-slate-900 text-white" data-purpose="media-and-broadcast">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-1 rounded-md inline-block mb-1.5">National Press</span>
+<h2 class="text-2xl font-black text-white tracking-tight">In The Media</h2>
+<p class="text-xs text-slate-400 mt-1">Coverage from leading publications highlighting Bangladesh’s vocational triumphs.</p>
+</div>
+<!-- Media Snippet 1 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800 mb-3">
+<div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+<span class="font-bold text-emerald-400">The Daily Star</span>
+<span>April 2023</span>
+</div>
+<h3 class="text-sm font-bold text-white mb-1 leading-snug">"Bangladesh Competitors Bring Home Historic Glory from Metz Abilympics"</h3>
+<p class="text-xs text-slate-400 line-clamp-2 mb-2">High-level appreciation from across the ICT sector as youth proved vocational equality on European soil.</p>
+<a class="text-xs font-semibold text-emerald-400 hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Read Coverage →</a>
+</div>
+<!-- Media Snippet 2 -->
+<div class="bg-surface-dark p-4 rounded-xl border border-slate-800 mb-5">
+<div class="flex items-center justify-between text-[11px] text-slate-400 mb-1">
+<span class="font-bold text-sky-400">Dhaka Tribune</span>
+<span>May 2023</span>
+</div>
+<h3 class="text-sm font-bold text-white mb-1 leading-snug">"Breaking Barriers: How Vocational Inclusion Drives Bangladesh’s ESG Goals"</h3>
+<p class="text-xs text-slate-400 line-clamp-2 mb-2">Reframing corporate social investment from charity to economic enablement and certified skills excellence.</p>
+<a class="text-xs font-semibold text-sky-400 hover:underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Read Coverage →</a>
+</div>
+<!-- Live Broadcast / Video Streaming Mock Container -->
+<div class="bg-surface-card rounded-2xl p-4 border border-slate-700/80">
+<div class="flex items-center space-x-2 mb-2 text-xs font-bold text-rose-400">
+<span class="w-2.5 h-2.5 rounded-full bg-bd-red animate-ping"></span>
+<span>LIVE BROADCAST FEED</span>
+</div>
+<h3 class="text-base font-black text-white mb-1">Follow Team Bangladesh Live</h3>
+<p class="text-xs text-slate-300 leading-relaxed mb-4">Stay connected with live athlete training sessions, candidate selection updates, and official press briefings across our streaming networks.</p>
+<div class="relative rounded-xl overflow-hidden border border-slate-700 bg-black aspect-video flex items-center justify-center">
+<img alt="Video stream preview" class="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB02xd_oVkikZWRMqFoYWEoqStBMqSsTP90MR-7c7-YUkYMvZxMr7JVMgYwObS6l_lczdeb9Y6DZDFBm6_gpa-vQXUrW6NdIYhus7Df08LEQoKGyfEBt6WpqQpXYJ89C3AWTlHHnavrrvUVGc-lxl56-xYjzTodnlKePH2xYZF0u2sGD-qJhaYPN8qECm02gkPB2u8ZwFrYQ-lKZln2yqxCOikn45RW2YrX3nCDjUGcZCqmeS9j6uC9"/>
+<button aria-label="Play broadcast livestream" class="touch-target absolute w-12 h-12 rounded-full bg-bd-red text-white flex items-center justify-center shadow-lg active:scale-90 transition-transform">
+<svg class="w-6 h-6 ml-0.5" fill="currentColor" viewbox="0 0 20 20">
+<path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
+</svg>
+</button>
+</div>
+</div>
+</section>
+<!-- END: InTheMediaAndBroadcast -->
+<!-- BEGIN: StoriesSection -->
+<section class="px-5 py-9 bg-white" data-purpose="journey-stories">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-1.5">Narrative Chronicles</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Stories from the Journey</h2>
+</div>
+<div class="space-y-4">
+<!-- Story 1 -->
+<article class="flex space-x-3.5 p-3 rounded-xl border border-gray-200 bg-slate-50">
+<img alt="Flag bearer on stage" class="w-20 h-20 rounded-lg object-cover shrink-0" height="80" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjw1nm5IF0qeVGMA6lzL_VkGe9eMs8YNSOTVGW2HgPojFGxY4jQFKC2SxX74UUwLAdFwHVEIwTTYFfWLLZrcSo-4iPXEfRyPkoGMDOYi2mYvmSI0yEbbJ4zjhFag5bikNVISysYHDiToN9so6F-S3Qx578pDep3sEOGM8f2vVQcnCyXA3gO-dvFSNRCJFbGPnrvlZE7IG3vIEf6kSqMAeSIbFQpn6ogj0r-36tLmIJVPPo0OGXkXfw" width="80"/>
+<div class="flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-bd-green">Roadmap 2027</span>
+<h3 class="text-xs font-bold text-slate-900 leading-snug">The Journey to Helsinki: Building Our Long-Term Squad</h3>
+</div>
+<a class="text-xs font-bold text-bd-green hover:underline mt-1" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Read Story →</a>
+</div>
+</article>
+<!-- Story 2 -->
+<article class="flex space-x-3.5 p-3 rounded-xl border border-gray-200 bg-slate-50">
+<img alt="Competitor working on desktop setup" class="w-20 h-20 rounded-lg object-cover shrink-0" height="80" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_3NJ4kWkzCLOjT_MSIjC86FZDr-JLVa7a5sv2dkHPjQkHB1VH90MmkxEPrCC0wBcRD0QUjecG-02vo2kRKWGmtF3N-jt__VEV_pbu1vkudUOnOCPe4WeF9e8RqJdz1Kfx1GzXMJ82tHwOjgqRFhKRm28NUaBOadPGsE2nykoq6WAjIT4AY8Xf7zzbFJV2bln7E238_DDrgMcs_bpv811SqJTFWNi2mPxQ5BT9foT3BV3_TVZ45FUZ" width="80"/>
+<div class="flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-finland-blue">Vocational Test</span>
+<h3 class="text-xs font-bold text-slate-900 leading-snug">Excellence Through Practice: Inside the Digital Labs</h3>
+</div>
+<a class="text-xs font-bold text-finland-blue hover:underline mt-1" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Read Story →</a>
+</div>
+</article>
+<!-- Story 3 -->
+<article class="flex space-x-3.5 p-3 rounded-xl border border-gray-200 bg-slate-50">
+<img alt="Team celebrating together" class="w-20 h-20 rounded-lg object-cover shrink-0" height="80" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgcwa85SFG_HY7xhRnm1LchRaJWG-r3O405c0uzt6oo7zTiCtu0-DKxjN_p-DD2WpxuXXw0yiLvEFYGL18oQae1qe5hEU07zgSal-RV407_Jf6F--5UHVydWmby9theoCZD3RyjDn_lUPljdP0dltQz4C33zRiQQTD3czNfiAwGCzJw85vUdF9FbRZhGPGwKTcOmYNnFsKvuABRCN2Rr-WW3ryt4mXLmzAWttfsTLo0Xsw2lDhTdLm" width="80"/>
+<div class="flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-purple-700">Global Fellowship</span>
+<h3 class="text-xs font-bold text-slate-900 leading-snug">Inside Team Bangladesh: Unity in Vocational Diversity</h3>
+</div>
+<a class="text-xs font-bold text-purple-700 hover:underline mt-1" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Read Story →</a>
+</div>
+</article>
+</div>
+</section>
+<!-- END: StoriesSection -->
+<!-- BEGIN: FaqAccordion -->
+<section class="px-5 py-9 bg-slate-50 border-t border-gray-200" data-purpose="accordion-faq" id="faq">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-bd-green bg-bd-green/10 px-2.5 py-1 rounded-md inline-block mb-1.5">Knowledge Base</span>
+<h2 class="text-2xl font-black text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+<p class="text-xs text-slate-500 mt-1">Comprehensive answers regarding Abilympics, Helsinki 2027, and corporate CSR partnerships.</p>
+</div>
+<div class="space-y-2.5" id="faq-container">
+<!-- FAQ 1 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>What is the International Abilympics?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            The International Abilympics is the quadrennial "Olympics of Abilities"—the premier world skills competition for persons with disabilities, demonstrating workplace parity, digital trade mastery, and vocational leadership across 40+ disciplines.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>What is Abilympics Helsinki 2027?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            Helsinki 2027 will host the 11th International Abilympics from 10 to 13 May 2027 in Messukeskus, Helsinki, Finland. It brings together over 1,000 top competitors representing more than 35 member countries.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>What was Bangladesh's performance in Metz 2023?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            Bangladesh sent a dedicated 10-member delegation with 7 competitors in Word Processing and ICT skills, making its historic debut and winning 2 international bronze medals for the nation.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>How are Bangladeshi participants selected and trained?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            Candidates undergo fair nationwide screening in collaboration with CSID and vocational institutes. Qualified competitors enter intensive multi-month bootcamps under certified trade trainers to replicate international competition conditions.
+          </div>
+</div>
+<!-- FAQ 5 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>How can corporations partner with Team Bangladesh?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            Corporate organizations can join as Official, Corporate, Technology, or Media Partners via our designated platform at <a class="text-bd-green font-bold underline" href="https://partners.epyra.agency">partners.epyra.agency</a>, supporting athlete scholarships, lab equipment, flight travel, and accessible tech setup.
+          </div>
+</div>
+<!-- FAQ 6 -->
+<div class="border border-gray-200 rounded-xl bg-white overflow-hidden shadow-xs">
+<button aria-expanded="false" class="faq-toggle touch-target w-full px-4 py-3.5 text-left flex items-center justify-between text-xs font-bold text-slate-900" type="button">
+<span>How does partnership support ESG and DEI objectives?</span>
+<span class="faq-icon text-base font-normal text-slate-400 ml-2 shrink-0">+</span>
+</button>
+<div class="faq-content hidden px-4 pb-3.5 text-xs text-slate-600 border-t border-gray-100 pt-2 leading-relaxed">
+            Sponsorship directly meets UN Sustainable Development Goals (SDG 8: Decent Work &amp; Economic Growth; SDG 10: Reduced Inequalities) and supplies corporations with verifiable social impact reporting metrics and certified DEI achievements.
+          </div>
+</div>
+</div>
+</section>
+<!-- END: FaqAccordion -->
+<!-- BEGIN: MobilePartnershipForm -->
+<section class="px-5 py-10 bg-nordic-dark text-white relative" data-purpose="lead-capture-form" id="contact-form">
+<div class="text-center mb-6">
+<span class="text-[11px] font-bold uppercase tracking-widest text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-1 rounded-md inline-block mb-1.5">Official Partnership Intake</span>
+<h2 class="text-2xl font-black text-white tracking-tight leading-tight">Join the Mission to Helsinki 2027</h2>
+<p class="text-xs text-slate-400 mt-1.5">Direct portal for corporate sponsors, media allies, technology providers, and academic institutions.</p>
+</div>
+<div class="bg-surface-card rounded-2xl p-5 border border-slate-800 shadow-xl">
+<form action="https://partners.epyra.agency" class="space-y-4" data-purpose="intake-form" method="GET">
+<!-- Full Name -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="fullName">Full Name *</label>
+<input class="touch-target w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green placeholder-slate-500" id="fullName" name="name" placeholder="e.g. Tanvir Ahmed" required="" type="text"/>
+</div>
+<!-- Organization -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="orgName">Organization / Enterprise *</label>
+<input class="touch-target w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green placeholder-slate-500" id="orgName" name="organization" placeholder="e.g. Grameenphone / BRAC / Apex" required="" type="text"/>
+</div>
+<!-- Email -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="email">Work Email *</label>
+<input class="touch-target w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green placeholder-slate-500" id="email" name="email" placeholder="partner@company.com" required="" type="email"/>
+</div>
+<!-- Phone -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="phone">Phone / WhatsApp Number</label>
+<input class="touch-target w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green placeholder-slate-500" id="phone" name="phone" placeholder="+880 1711 000000" type="tel"/>
+</div>
+<!-- Partnership Category -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="partnerCategory">Partnership Category *</label>
+<select class="touch-target w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green" id="partnerCategory" name="category" required="">
+<option disabled="" selected="" value="">Select Partnership Tier</option>
+<option value="official">Official Partner (Title Sponsorship)</option>
+<option value="corporate">Corporate Partner (CSR / ESG)</option>
+<option value="technology">Technology &amp; Equipment Partner</option>
+<option value="media">Media &amp; Broadcast Ally</option>
+<option value="institutional">Academic / Vocational Training Institution</option>
+<option value="supporting">Supporting Donor / Contributor</option>
+</select>
+</div>
+<!-- Proposal Brief -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1" for="proposal">Collaboration Proposal / Details *</label>
+<textarea class="w-full rounded-xl bg-slate-900 border-slate-700 text-white text-sm focus:ring-2 focus:ring-bd-green focus:border-bd-green placeholder-slate-500" id="proposal" name="details" placeholder="Please outline how your organization wishes to collaborate with Abilympics Bangladesh on the road to Helsinki 2027..." required="" rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="touch-target w-full inline-flex items-center justify-center font-bold text-sm tracking-wider uppercase px-6 py-4 rounded-xl bg-bd-green hover:bg-bd-green-dark text-white shadow-lg shadow-bd-green/30 active:scale-[0.98] transition-all" type="submit">
+            Submit Partnership Inquiry
+          </button>
+</form>
+<div class="mt-4 pt-4 border-t border-slate-800 text-center">
+<p class="text-[11px] text-slate-400">
+            Prefer direct briefing or official pitch deck? Visit our secure partnership portal:
+          </p>
+<a class="inline-block mt-1.5 text-xs font-bold text-emerald-400 underline" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+            https://partners.epyra.agency
+          </a>
+</div>
+</div>
+</section>
+<!-- END: MobilePartnershipForm -->
+</main>
+<!-- BEGIN: MobileFooter -->
+<footer class="bg-black text-white px-5 pt-9 pb-8 border-t border-slate-800" data-purpose="mobile-footer">
+<!-- Brand Info -->
+<div class="flex items-center space-x-3 mb-4">
+<img alt="Abilympics Bangladesh Helsinki 2027 Logo" class="h-12 w-12 object-contain" height="48" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMkLKwcbFAdKVRAT4QMyJEqEociUY0aJus_3VekL8p0sygVDFlUp_nN8iXYpTUzzDcY936mtarvXgA1uOOomgsRX0L1AsmysbV_GR30bCaNC_3mk81ZmDpA8uDHE2XSY_hjohTkDkdGJRwzT4QRZVodqpBnoo9LKgpiRw6unsxl_G9-JckATbJmRpQkN8f8rId8fpOlrcLxvCLI7n0LaXqQItIebv1lEF8X0sHUkLJDp7HH1dtsvYQ" width="48"/>
+<div>
+<div class="text-sm font-black text-white tracking-tight uppercase">Abilympics Bangladesh</div>
+<div class="text-[11px] font-semibold text-bd-green">Helsinki 2027 Official Campaign</div>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed mb-5">
+      Empowering Ability. Inspiring Excellence. Representing Bangladesh.
+    </p>
+<!-- Navigation & Quick Links -->
+<div class="grid grid-cols-2 gap-4 text-xs text-slate-300 mb-6">
+<div>
+<h4 class="font-bold text-white text-[11px] uppercase tracking-wider mb-2">Navigation</h4>
+<ul class="space-y-1.5">
+<li><a class="hover:text-emerald-400" href="#about">About Abilympics</a></li>
+<li><a class="hover:text-emerald-400" href="#metz-retrospective">Metz 2023 Journey</a></li>
+<li><a class="hover:text-emerald-400" href="#countdown">Helsinki 2027</a></li>
+<li><a class="hover:text-emerald-400" href="#champions">The Champions</a></li>
+<li><a class="hover:text-emerald-400" href="#gallery">Photo Archive</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white text-[11px] uppercase tracking-wider mb-2">Partnerships</h4>
+<ul class="space-y-1.5">
+<li><a class="hover:text-emerald-400" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">Portal &amp; Deck</a></li>
+<li><a class="hover:text-emerald-400" href="#partnerships">Technology Alliances</a></li>
+<li><a class="hover:text-emerald-400" href="#partnerships">Media Entertainment</a></li>
+<li><a class="hover:text-emerald-400" href="#why-partner">ESG / CSR Alignment</a></li>
+<li><a class="hover:text-emerald-400" href="#contact-form">Contact Secretariat</a></li>
+</ul>
+</div>
+</div>
+<!-- Institutional Endorsement -->
+<div class="p-3 bg-surface-dark rounded-xl border border-slate-800 text-[11px] text-slate-400 leading-relaxed mb-6">
+      Organized in direct alliance with the Centre for Services and Information on Disability (CSID), United Action, and authorized national vocational bodies.
+    </div>
+<!-- Legal & Accessibility Note -->
+<div class="border-t border-slate-900 pt-4 flex flex-col space-y-2 text-[10px] text-slate-500">
+<div class="flex justify-between items-center">
+<span>© 2024–2027 Abilympics Bangladesh. All rights reserved.</span>
+</div>
+<div class="flex space-x-3">
+<a class="hover:underline" href="#">Accessibility Statement</a>
+<a class="hover:underline" href="#">Privacy &amp; Ethics</a>
+<a class="hover:underline" href="#">IAF Accreditation</a>
+</div>
+</div>
+</footer>
+<!-- END: MobileFooter -->
+<!-- BEGIN: FloatingMobileAction -->
+<div class="fixed bottom-3 inset-x-4 z-40 sm:hidden pointer-events-none" data-purpose="floating-mobile-bar">
+<div class="pointer-events-auto bg-slate-950/90 backdrop-blur-lg border border-slate-700/80 p-2 rounded-2xl shadow-2xl flex items-center justify-between">
+<div class="pl-2">
+<span class="block text-[10px] uppercase font-bold text-slate-400">Helsinki 2027</span>
+<span class="block text-xs font-black text-emerald-400">Official Partner Intake</span>
+</div>
+<a class="touch-target px-4 py-2.5 rounded-xl bg-bd-green hover:bg-bd-green-dark text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-bd-green/30 active:scale-95 transition-all" href="https://partners.epyra.agency" rel="noopener noreferrer" target="_blank">
+        Become a Partner
+      </a>
+</div>
+</div>
+<!-- END: FloatingMobileAction -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="mobile-drawer-toggle">
+    // Mobile navigation menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+    menuBtn.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !isExpanded);
+      drawer.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+
+    // Close menu when tapping a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+<script data-purpose="countdown-logic">
+    // Realtime Countdown to Abilympics Helsinki Opening Ceremony: May 10, 2027
+    const targetDate = new Date('2027-05-10T09:00:00+03:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById('timer-days');
+        const hoursEl = document.getElementById('timer-hours');
+        const minEl = document.getElementById('timer-minutes');
+        const secEl = document.getElementById('timer-seconds');
+
+        if (daysEl) daysEl.innerText = days;
+        if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+        if (minEl) minEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if (secEl) secEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+<script data-purpose="accordion-interaction">
+    // Accessible FAQ Accordion Functionality
+    const faqButtons = document.querySelectorAll('.faq-toggle');
+
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.faq-icon');
+
+        // Close all other accordions for compact mobile experience
+        faqButtons.forEach(otherBtn => {
+          if (otherBtn !== button) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            otherBtn.nextElementSibling.classList.add('hidden');
+            const otherIcon = otherBtn.querySelector('.faq-icon');
+            if (otherIcon) otherIcon.textContent = '+';
+          }
+        });
+
+        // Toggle clicked
+        button.setAttribute('aria-expanded', !isExpanded);
+        content.classList.toggle('hidden');
+        if (icon) {
+          icon.textContent = !isExpanded ? '−' : '+';
+        }
+      });
+    });
+  </script>
+<script data-purpose="accessibility-toggles">
+    // Text size and contrast adjustments
+    let currentFontSize = 100;
+    const body = document.body;
+
+    document.getElementById('btn-font-increase')?.addEventListener('click', () => {
+      if (currentFontSize < 130) {
+        currentFontSize += 10;
+        body.style.fontSize = currentFontSize + '%';
+      }
+    });
+
+    document.getElementById('btn-font-decrease')?.addEventListener('click', () => {
+      if (currentFontSize > 90) {
+        currentFontSize -= 10;
+        body.style.fontSize = currentFontSize + '%';
+      }
+    });
+
+    document.getElementById('btn-contrast-toggle')?.addEventListener('click', () => {
+      body.classList.toggle('high-contrast');
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

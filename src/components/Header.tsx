@@ -4,8 +4,7 @@ const links = [
   ["About", "#about"],
   ["Metz 2023", "#metz-2023"],
   ["Helsinki 2027", "#helsinki-2027"],
-  ["Participants", "#participants"],
-  ["Partnerships", "#partnerships"],
+  ["Partnerships", "#partnership-opportunities"],
   ["Gallery", "#gallery"],
 ];
 
@@ -30,7 +29,7 @@ export function Header() {
             {links.map(([label, href]) => <a key={href} href={href} className="rounded px-1 py-2 hover:text-brand-green">{label}</a>)}
           </nav>
           <div className="flex items-center gap-2">
-            <a href="#contact" className="rounded-lg bg-brand-green px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-green-dark">Become a Partner</a>
+            <a href="#partnership-cta" className="rounded-lg bg-brand-green px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-green-dark">Become a Partner</a>
             <details className="relative xl:hidden">
               <summary className="list-none cursor-pointer rounded-lg border border-slate-200 p-2.5 text-brand-slate focus-visible:outline-2 focus-visible:outline-brand-green" aria-label="Open navigation menu">
                 <span aria-hidden="true" className="block space-y-1">

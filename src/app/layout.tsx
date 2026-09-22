@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     template: "%s — Abilympics Bangladesh",
   },
   description: siteDescription,
+  alternates: {
+    canonical: siteUrl,
+  },
 
   openGraph: {
     type: "website",

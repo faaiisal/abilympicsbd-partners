@@ -12,7 +12,7 @@ export function Hero() {
           <h1 className="mt-5 max-w-4xl text-5xl leading-[1.02] text-white sm:text-6xl lg:text-7xl">Bangladesh to the <span className="text-emerald-300">Global Stage.</span></h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">Empowering Ability. Inspiring Excellence. Representing Bangladesh at the 11th International Abilympics in Helsinki, Finland.</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#partnerships" className="rounded-lg bg-brand-green px-5 py-3 font-bold text-white hover:bg-brand-green-light">Explore partnership opportunities</a>
+            <a href="#partnership-opportunities" className="rounded-lg bg-brand-green px-5 py-3 font-bold text-white hover:bg-brand-green-light">Explore partnership opportunities</a>
             <a href="#about" className="rounded-lg border border-white/40 px-5 py-3 font-bold text-white hover:bg-white/10">Discover the journey</a>
           </div>
         </div>

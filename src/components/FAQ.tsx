@@ -6,7 +6,7 @@ export function FAQ() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="scroll-mt-24 bg-slate-50 py-20 lg:py-28"
+      className="scroll-mt-24 bg-slate-50 py-20 lg:py-28 border-t border-gray-200 "
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">

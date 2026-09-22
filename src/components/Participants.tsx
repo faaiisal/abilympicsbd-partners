@@ -4,5 +4,32 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Participants() {
   const validStories = stories.filter((story) => story.image.src !== "/images/2023/metz-2023-delegation-01.webp");
-  return <section id="champions" className="scroll-mt-24 bg-white py-20 lg:py-28"><div className="container-site"><div className="mx-auto max-w-3xl text-center"><SectionHeading eyebrow="Participant spotlights" title="Meet the Champions" description="Dedicated professionals proving vocational mastery and breaking stereotypes on the world stage." /></div><div className="mt-12 space-y-10">{participants.map((person) => <article key={person.id} className="grid gap-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-card sm:p-8 lg:grid-cols-12 lg:items-center lg:p-12"><div className="lg:col-span-5"><Image src={person.image.src} alt={person.image.alt} width={person.image.width} height={person.image.height} className="mx-auto aspect-[4/5] w-full max-w-sm rounded-2xl border border-slate-200 bg-white object-cover shadow-raised" /></div><div className="lg:col-span-7"><span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${person.badgeColor}`}>Featured candidate</span><h3 className="mt-4 text-3xl">{person.name}</h3><p className="mt-1 font-semibold text-brand-green">{person.discipline}</p><p className="mt-5 leading-7 text-slate-600">{person.bio}</p><blockquote className={`mt-5 border-l-4 pl-4 text-sm italic text-slate-700 ${person.quoteAccent}`}>“{person.quote}”</blockquote><a href="#contact" className={`mt-6 inline-block text-sm font-bold underline underline-offset-4 ${person.ctaColor}`}>{person.sponsorCtaLabel}</a></div></article>)}</div>{validStories.length ? <div className="mt-14"><h3 className="text-2xl">Stories from the road</h3><div className="mt-5 grid gap-4 md:grid-cols-2">{validStories.map((story) => <article key={story.id} className="flex gap-4 rounded-xl border border-slate-200 p-4"><Image src={story.image.src} alt={story.image.alt} width={story.image.width} height={story.image.height} className="h-20 w-20 rounded-lg object-cover" /><div><p className={`text-xs font-bold uppercase tracking-wide ${story.categoryColor}`}>{story.category}</p><h4 className="mt-1 text-base">{story.headline}</h4></div></article>)}</div></div> : null}</div></section>;
+  return <section id="champions" className="scroll-mt-24 bg-white py-20 lg:py-28"><div className="container-site"><div className="mx-auto max-w-3xl text-center"><SectionHeading eyebrow="Participant spotlights" title="Meet the Champions" description="Dedicated professionals proving vocational mastery and breaking stereotypes on the world stage." /></div>  <div className="mt-12 space-y-8">
+    {participants.map((person, index) => {
+      const imageFirst = index % 2 === 0;
+      return (
+        <article key={person.id} className="grid gap-8 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-card sm:p-8 lg:grid-cols-12 lg:items-center lg:gap-12 lg:p-10">
+          <div className={`${imageFirst ? "lg:order-1" : "lg:order-2"} lg:col-span-5`}>
+            <Image
+              src={person.image.src}
+              alt={person.image.alt}
+              width={person.image.width}
+              height={person.image.height}
+              className="mx-auto aspect-[4/5] w-full max-w-sm rounded-xl border border-slate-200 bg-white object-cover shadow-raised"
+            />
+          </div>
+          <div className={`${imageFirst ? "lg:order-2" : "lg:order-1"} lg:col-span-7`}>
+            <span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold ${person.badgeColor}`}>Featured candidate</span>
+            <h3 className="mt-4 text-3xl">{person.name}</h3>
+            <p className="mt-1 text-sm font-semibold text-brand-green">{person.discipline}</p>
+            <p className="mt-5 text-sm leading-7 text-slate-600">{person.bio}</p>
+            <blockquote className={`mt-5 rounded-lg border border-slate-200 border-l-4 bg-white px-4 py-3 text-sm italic leading-6 text-slate-700 ${person.quoteAccent}`}>“{person.quote}”</blockquote>
+            <a href="#contact" className={`mt-6 inline-block text-xs font-black uppercase tracking-wider underline underline-offset-4 ${person.ctaColor}`}>{person.sponsorCtaLabel} →</a>
+          </div>
+        </article>
+      );
+    })}
+  </div>
+  </div>
+  </section>;
 }

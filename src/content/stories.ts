@@ -46,7 +46,7 @@ export const stories: StoryCard[] = [
     categoryColor: "text-purple-700",
     headline: "Inside Team Bangladesh: Unity in Vocational Diversity",
     image: {
-      src: "/images/2023/metz-2023-delegation-01.webp",
+      src: "/images/gallery/gallery-10.webp",
       alt: "Team Bangladesh celebrating together at Metz",
       width: 80,
       height: 80,

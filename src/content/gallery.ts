@@ -18,12 +18,13 @@ import type { GalleryImage } from "@/types/content";
 export const galleryImages: GalleryImage[] = [
   // ─── Helsinki 2027 ───────────────────────────────────────────────────────
   {
-    id: "helsinki-emblem",
-    src: "/images/2027/helsinki-2027-emblem.webp",
+    id: "helsinki-2027",
+    src: "/images/2027/gallery-12.webp",
     alt: "Official Abilympics Bangladesh 2027 Emblem",
     caption: "Official Delegation Emblem • 2027",
     category: "helsinki",
   },
+  // ─── participants ───────────────────────────────────────────────────────
   {
     id: "helsinki-poster-joshim",
     src: "/images/2023/joshim-2023.webp",

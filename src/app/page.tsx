@@ -31,7 +31,7 @@ export default function Home() {
         <PartnerBenefits />
         <Gallery />
         <Media />
-        <Stories />
+        {/* <Stories /> */}
         <FAQ />
         <PartnershipForm />
       </main>

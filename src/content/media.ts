@@ -55,7 +55,7 @@ export const broadcastVideo = {
       "Stay connected with live athlete training sessions, candidate selection updates, and official press briefings across our streaming networks.",
     /** Used as fallback image when Facebook embed is unavailable */
     fallbackImage: {
-      src: "/images/gallery/gallery-00.webp",
+      src: "/images/gallery/gallery-16.webp",
       alt: "Team Bangladesh training session preview",
     },
   },

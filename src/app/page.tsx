@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Helsinki2027 } from "@/components/Helsinki2027";
 import { MetzJourney } from "@/components/MetzJourney";
-import { WhyPartner } from "@/components/WhyPartner";
+import { PartnershipOpportunities } from "@/components/PartnershipOpportunities";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
         <About />
         <MetzJourney />
         <Helsinki2027 />
-        <WhyPartner />
+        <PartnershipOpportunities />
       </main>
     </>
   );

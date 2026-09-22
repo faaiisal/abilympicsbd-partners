@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { Helsinki2027 } from "@/components/Helsinki2027";
 import { MetzJourney } from "@/components/MetzJourney";
 import { PartnerBenefits } from "@/components/PartnerBenefits";
+import { PartnershipCTA } from "@/components/PartnershipCTA";
 import { PartnershipOpportunities } from "@/components/PartnershipOpportunities";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <Helsinki2027 />
         <PartnershipOpportunities />
         <PartnerBenefits />
+        <PartnershipCTA />
       </main>
     </>
   );

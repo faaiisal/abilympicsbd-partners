@@ -1,0 +1,6 @@
+import { site } from "@/content";
+import { SectionHeading } from "./SectionHeading";
+
+export function Contact() {
+  return <section id="contact" className="scroll-mt-24 bg-brand-green py-20 text-white lg:py-28"><div className="container-site grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end"><SectionHeading dark eyebrow="Start a conversation" title="Help take Bangladesh to Helsinki." description="Corporate, technology, media and supporting organizations can contact the official secretariat to discuss a partnership." /><div className="rounded-2xl bg-white p-6 text-brand-slate shadow-raised"><p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-green">Official contact</p><a href={`mailto:${site.contactEmail}`} className="mt-3 block break-all text-xl font-bold text-brand-green underline underline-offset-4">{site.contactEmail}</a><p className="mt-4 text-sm text-slate-600">For institutional inquiries, media briefings and sponsorship discussions.</p><a href={`mailto:${site.contactEmail}?subject=Abilympics%20Bangladesh%20partnership%20inquiry`} className="mt-6 inline-flex rounded-lg bg-brand-green px-5 py-3 font-bold text-white hover:bg-brand-green-dark">Email the secretariat</a></div></div></section>;
+}

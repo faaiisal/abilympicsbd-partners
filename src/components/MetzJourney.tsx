@@ -70,10 +70,10 @@ export function MetzJourney() {
               src="/images/participants/metz-2023-banner.webp"
               alt="Bangladeshi delegation standing proudly with international peers at the 10th Abilympics"
               width={1200}
-              height={760}
-              className="h-72 w-full object-cover sm:h-96"
+              height={435}
+              className="h-72 w-full object-cover sm:h-96 lg:h-[435px]"
             />
-            <figcaption className="bg-brand-slate p-4 text-white">
+            <figcaption className="bg-brand-slate p-4 text-white bottom-0 bg-red">
               <p className="text-xs font-bold uppercase tracking-wide text-emerald-400">Metz Arena Solidarity</p>
               <p className="mt-1 text-xs text-slate-300">Bangladesh delegation standing proudly with international peers at the 10th Abilympics.</p>
             </figcaption>

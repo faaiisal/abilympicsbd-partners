@@ -11,9 +11,6 @@ import { Resend } from "resend";
  * Accepts: application/x-www-form-urlencoded  (FormData from the client)
  * Returns: 200 { success: true }  |  4xx/5xx { error: string }
  */
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const SECRETARIAT_EMAIL = "abilympicsbd@gmail.com";
 const FROM_NAME = "Abilympics Bangladesh";
 const FROM_ADDRESS = "noreply@epyra.agency"; // verified sender domain in Resend
@@ -62,6 +59,26 @@ function validateFields(p: InquiryPayload): string | null {
     return "A valid email address is required.";
   if (!p.interest) return "Please select a partnership interest.";
   if (!p.message) return "Message is required.";
+
+  if (
+    p.name.length > 200 ||
+    p.organization.length > 200 ||
+    p.email.length > 254 ||
+    p.phone.length > 50 ||
+    p.interest.length > 100 ||
+    p.message.length > 5000
+  ) {
+    return "One or more fields are too long.";
+  }
+
+  if (
+    [p.name, p.organization, p.email, p.phone, p.interest, p.message].some(
+      (value) => value.includes("\r") || value.includes("\n"),
+    )
+  ) {
+    return "Invalid form data.";
+  }
+
   return null;
 }
 
@@ -196,6 +213,8 @@ export async function POST(request: NextRequest) {
     console.error("[/api/partnership] RESEND_API_KEY is not set.");
     return NextResponse.json({ error: "Server misconfiguration. Please contact us directly." }, { status: 500 });
   }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   // 4. Send both emails concurrently
   try {

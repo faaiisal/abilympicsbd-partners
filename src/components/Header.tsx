@@ -37,10 +37,19 @@ export function Header() {
       <AccessibilityBar />
       <aside aria-label="Official updates ticker" className="overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white">
         <div className="flex items-center">
-          <span className="ml-4 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider">Official Briefing</span>
+          <span className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-white" aria-hidden="true" />
+            Official Briefing
+          </span>
+          {/* Overflow container — must clip the scrolling content */}
           <div className="relative ml-4 min-w-0 flex-1 overflow-hidden">
-            <div className="animate-marquee flex min-w-max gap-8 whitespace-nowrap text-slate-300">
-              {[...tickerItems, ...tickerItems].map((item, index) => <span key={`${item}-${index}`}>{item} <span className="ml-8 text-emerald-400">•</span></span>)}
+            <div className="ticker-scroll flex min-w-max gap-0 text-slate-300">
+              {[...tickerItems, ...tickerItems].map((item, index) => (
+                <span key={`${item}-${index}`} className="mx-6 inline-flex items-center gap-6 whitespace-nowrap">
+                  {item}
+                  <span className="text-emerald-400" aria-hidden="true">•</span>
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -59,7 +68,10 @@ export function Header() {
             {links.map(([label, href]) => <a key={href} href={href} className="rounded px-1 py-2 hover:text-brand-green">{label}</a>)}
           </nav>
           <div className="flex items-center gap-2">
-            <a href="#contact" className="rounded-lg bg-brand-green px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-green-dark">Become a Partner</a>
+            <a href="#contact" className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-brand-green px-5 py-3 text-xs font-extrabold uppercase tracking-wider text-white shadow-md hover:bg-brand-green-dark transition-all">
+              Become a Partner
+              <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_outward</span>
+            </a>
             <details className="relative xl:hidden">
               <summary className="list-none cursor-pointer rounded-lg border border-slate-200 p-2.5 text-brand-slate focus-visible:outline-2 focus-visible:outline-brand-green" aria-label="Open navigation menu">
                 <span aria-hidden="true" className="block space-y-1">

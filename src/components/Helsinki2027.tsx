@@ -17,7 +17,10 @@ export function Helsinki2027() {
           <p className="mx-auto mt-4 max-w-2xl text-base text-sky-200 sm:text-lg">{`10–13 May 2027 • ${event.venue}, ${event.location}`}</p>
           <div className="mx-auto mt-12 max-w-3xl"><Countdown target={event.startDateTime} /></div>
           <p className="mt-12 text-base italic text-slate-300">“The world is waiting. Bangladesh is preparing.”</p>
-          <a href="#contact" className="mt-8 inline-flex items-center rounded-xl bg-brand-green px-10 py-4 text-sm font-black uppercase tracking-wider text-white shadow-2xl hover:bg-brand-green-light">Become a Partner <span aria-hidden="true" className="ml-2 text-lg">↗</span></a>
+          <a href="#contact" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-brand-green px-10 py-4 text-sm font-black uppercase tracking-wider text-white shadow-2xl hover:bg-brand-green-light">
+            Become a Partner
+            <span className="material-symbols-outlined" style={{fontSize: '18px'}} aria-hidden="true">arrow_outward</span>
+          </a>
         </div>
       </div>
     </section>

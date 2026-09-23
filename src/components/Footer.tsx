@@ -11,7 +11,7 @@ export function Footer() {
               <div><p className="font-heading font-bold text-white">Abilympics Bangladesh</p><p className="text-xs text-emerald-300">Road to Helsinki 2027</p></div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-6">“Empowering Ability. Inspiring Excellence. Representing Bangladesh.”</p>
-            <a href="#contact" className="mt-5 inline-flex rounded-lg bg-brand-green px-4 py-2 text-xs font-black uppercase tracking-wider text-white">Become a Partner ↗</a>
+            <a href="#contact" className="mt-5 inline-flex items-center gap-1.5 rounded-lg bg-brand-green px-4 py-2 text-xs font-black uppercase tracking-wider text-white">Become a Partner <span className="material-symbols-outlined" style={{fontSize: '14px'}} aria-hidden="true">arrow_outward</span></a>
           </div>
           <div><p className="text-xs font-bold uppercase tracking-wider text-white">Navigation</p><ul className="mt-4 space-y-2 text-sm"><li><a href="#about" className="hover:text-white">About Abilympics</a></li><li><a href="#journey" className="hover:text-white">Metz 2023 Journey</a></li><li><a href="#helsinki2027" className="hover:text-white">Helsinki 2027</a></li><li><a href="#champions" className="hover:text-white">The Champions</a></li></ul></div>
           <div><p className="text-xs font-bold uppercase tracking-wider text-white">Partnerships</p><ul className="mt-4 space-y-2 text-sm"><li><a href="#partners" className="hover:text-white">Corporate CSR</a></li><li><a href="#partners" className="hover:text-white">Technology Allies</a></li><li><a href="#media" className="hover:text-white">Media Endorsement</a></li><li><a href="#contact" className="hover:text-white">Contact Secretariat</a></li></ul></div>

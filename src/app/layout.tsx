@@ -1,27 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 /* ============================================================
    FONTS
-   Inter      — body, UI labels, data
-   Plus Jakarta Sans — headings, display
-   Both served by next/font (self-hosted, no external request)
+   Use CSS stack fallbacks instead of next/font/google to avoid the
+   Turbopack build-time font resolution issue while preserving the
+   same design intent and typography hierarchy.
    ============================================================ */
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-plus-jakarta-sans",
-  display: "swap",
-});
 
 /* ============================================================
    METADATA
@@ -81,10 +66,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${plusJakartaSans.variable}`}
-    >
+    <html lang="en">
       <head>
         {/* Material Symbols Outlined — icon font used across all components */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

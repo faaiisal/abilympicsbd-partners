@@ -35,21 +35,21 @@ export function Header() {
   return (
     <>
       <AccessibilityBar />
-      <aside aria-label="Official updates ticker" className="overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white">
-        <div className="flex items-center">
-          <span className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider">
+      <aside aria-label="Official Updates Ticker" className="overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white">
+        <div className="flex w-full items-center">
+          {/* Red badge */}
+          <div className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider shadow-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-white" aria-hidden="true" />
             Official Briefing
-          </span>
-          {/* Overflow container — must clip the scrolling content */}
-          <div className="relative ml-4 min-w-0 flex-1 overflow-hidden">
-            <div className="ticker-scroll flex min-w-max gap-0 text-slate-300">
-              {[...tickerItems, ...tickerItems].map((item, index) => (
-                <span key={`${item}-${index}`} className="mx-6 inline-flex items-center gap-6 whitespace-nowrap">
-                  {item}
-                  <span className="text-emerald-400" aria-hidden="true">•</span>
-                </span>
-              ))}
+          </div>
+          {/* Scrolling content — overflow-hidden clips the ticker */}
+          <div className="relative ml-4 w-full overflow-hidden">
+            <div className="animate-marquee whitespace-nowrap text-slate-300 font-medium text-xs sm:text-sm">
+              {/* Render two copies: item • item • ... for seamless loop */}
+              {[...tickerItems, ...tickerItems].flatMap((item, i) => [
+                <span key={`t-${i}`} className="mx-6">{item}</span>,
+                <span key={`b-${i}`} className="text-emerald-400" aria-hidden="true">•</span>,
+              ])}
             </div>
           </div>
         </div>

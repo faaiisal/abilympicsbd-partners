@@ -8,49 +8,53 @@
 
 @theme inline {
   /* --- Brand: Bangladesh Green --- */
-  --color-brand-green:       #006A4E;
-  --color-brand-green-dark:  #004D39;
+  --color-brand-green: #006A4E;
+  --color-brand-green-dark: #004D39;
   --color-brand-green-light: #0A8764;
-  --color-brand-forest:      #0D5C43;
+  --color-brand-forest: #0D5C43;
 
   /* --- Brand: Bangladesh Red --- */
-  --color-brand-red:         #E11D48;
-  --color-brand-red-dark:    #BE123C;
+  --color-brand-red: #E11D48;
+  --color-brand-red-dark: #BE123C;
 
   /* --- Brand: Nordic / Helsinki Blue --- */
-  --color-brand-ice:         #0284C7;
-  --color-brand-ice-light:   #E0F2FE;
-  --color-brand-nordic-sky:  #38BDF8;
+  --color-brand-ice: #0284C7;
+  --color-brand-ice-light: #E0F2FE;
+  --color-brand-nordic-sky: #38BDF8;
 
   /* --- Brand: Dark Surfaces --- */
-  --color-brand-slate:       #0F172A;
-  --color-brand-charcoal:    #0B0F15;
-  --color-brand-surface:     #101419;
+  --color-brand-slate: #0F172A;
+  --color-brand-charcoal: #0B0F15;
+  --color-brand-surface: #101419;
 
   /* --- Typography --- */
-  --font-sans:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-plus-jakarta-sans), var(--font-inter), ui-sans-serif, sans-serif;
 
   /* --- Container widths --- */
-  --container-xs:  480px;
-  --container-sm:  640px;
-  --container-md:  768px;
-  --container-lg:  1024px;
-  --container-xl:  1280px;
+  --container-xs: 480px;
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
   --container-2xl: 1440px;
 
   /* --- Border radius --- */
-  --radius-xs:  4px;
-  --radius-sm:  6px;
-  --radius-md:  10px;
-  --radius-lg:  16px;
-  --radius-xl:  24px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 9999px;
 
   /* --- Shadows (used sparingly) --- */
-  --shadow-card:   0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-raised: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-glow-green: 0 0 24px 0 rgb(0 106 78 / 0.30);
+
+  /* existing tokens... */
+
+  --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 /* ============================================================
@@ -58,6 +62,7 @@
    ============================================================ */
 
 @layer base {
+
   /* Box model */
   *,
   *::before,
@@ -105,6 +110,7 @@
     }
   }
 
+
   /* Body defaults */
   body {
     font-family: var(--font-sans);
@@ -119,7 +125,12 @@
   }
 
   /* Heading defaults — use heading font */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     line-height: 1.1;
     font-weight: 800;
@@ -179,7 +190,12 @@
 
   /* Avoid text overflows */
   p,
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     overflow-wrap: break-word;
   }
 }
@@ -189,23 +205,27 @@
    ============================================================ */
 
 @layer utilities {
+
   /* Centered max-width container */
   .container-site {
     width: 100%;
     max-width: var(--container-xl);
     margin-inline: auto;
-    padding-inline: 1.25rem; /* 20px */
+    padding-inline: 1.25rem;
+    /* 20px */
   }
 
   @media (min-width: 640px) {
     .container-site {
-      padding-inline: 2rem; /* 32px */
+      padding-inline: 2rem;
+      /* 32px */
     }
   }
 
   @media (min-width: 1024px) {
     .container-site {
-      padding-inline: 3rem; /* 48px */
+      padding-inline: 3rem;
+      /* 48px */
     }
   }
 
@@ -232,7 +252,7 @@
   }
 
   .ticker-scroll {
-    display: inline-flex;
+    display: block;
     white-space: nowrap;
     animation: ticker-marquee 42s linear infinite;
     will-change: transform;
@@ -243,9 +263,9 @@
     animation-play-state: paused;
   }
 
-  /* Keep old class as alias for backward compat */
+  /* Alias — same behaviour */
   .animate-marquee {
-    display: inline-flex;
+    display: block;
     white-space: nowrap;
     animation: ticker-marquee 42s linear infinite;
     will-change: transform;
@@ -297,6 +317,7 @@
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -307,8 +328,17 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
 
+@keyframes ping {
+
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

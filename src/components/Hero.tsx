@@ -15,7 +15,10 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 py-20 text-center sm:px-6 lg:px-8">
         <div className="mx-auto mb-8 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md">
           {/* Animated ping — static base dot + absolute ping ring overlay */}
-          <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
+          <span
+            className="relative flex h-2.5 w-2.5 shrink-0"
+            aria-hidden="true"
+          >
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
           </span>
@@ -30,7 +33,7 @@ export function Hero() {
           <div className="mx-auto flex max-w-md flex-col items-center justify-center gap-4 sm:max-w-none sm:flex-row">
             <a href="https://partners.epyra.agency" target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-green px-8 py-4 text-sm font-black uppercase tracking-wider text-white shadow-2xl hover:bg-brand-green-light sm:w-auto">
               Become a Partner
-              <span className="material-symbols-outlined" style={{fontSize: '18px'}}>arrow_outward</span>
+              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_outward</span>
             </a>
             <a href="#journey" className="inline-flex w-full items-center justify-center rounded-xl border border-white/25 bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-sm hover:bg-white/20 sm:w-auto">Explore Metz Journey</a>
           </div>
@@ -42,7 +45,7 @@ export function Hero() {
           <p>Helsinki 2027</p>
           <p>Messukeskus Exhibition and Convention Centre, Helsinki, Finland</p>
           <a href={`mailto:${site.contactEmail}`}>Contact the secretariat</a>
-          </div>
+        </div>
       </div>
     </section>
   );

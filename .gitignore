@@ -39,6 +39,7 @@
 
 # Allow example environment file
 !.env.example
+.env*
 
 
 # =========================================================

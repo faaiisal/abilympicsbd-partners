@@ -39,7 +39,7 @@ export function Gallery() {
     <section
       id="gallery"
       aria-labelledby="gallery-title"
-      className="scroll-mt-24 bg-slate-50 py-20 lg:py-28"
+      className="py-20 lg:py-28 bg-slate-50 border-t border-gray-200"
     >
       <div className="container-site">
         <div className="grid items-end gap-6 lg:grid-cols-[minmax(0,1fr)_auto]">

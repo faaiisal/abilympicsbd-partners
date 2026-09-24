@@ -8,11 +8,9 @@ import { Hero } from "@/components/Hero";
 import { Helsinki2027 } from "@/components/Helsinki2027";
 import { MetzJourney } from "@/components/MetzJourney";
 import { Media } from "@/components/Media";
-import { PartnerBenefits } from "@/components/PartnerBenefits";
 import { PartnershipForm } from "@/components/PartnershipForm";
 import { PartnershipOpportunities } from "@/components/PartnershipOpportunities";
 import { Participants } from "@/components/Participants";
-import { Stories } from "@/components/Stories";
 import { WhyPartner } from "@/components/WhyPartner";
 
 export default function Home() {
@@ -28,10 +26,8 @@ export default function Home() {
         <CSID />
         <WhyPartner />
         <PartnershipOpportunities />
-        <PartnerBenefits />
         <Gallery />
         <Media />
-        {/* <Stories /> */}
         <FAQ />
         <PartnershipForm />
       </main>

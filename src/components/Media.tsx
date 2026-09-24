@@ -7,7 +7,7 @@ export function Media() {
     <section
       id="media"
       aria-labelledby="media-title"
-      className="scroll-mt-24 bg-slate-50 py-20 lg:py-28"
+      className="scroll-mt-24 bg-white py-20 lg:py-28"
     >
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">

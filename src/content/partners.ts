@@ -115,7 +115,7 @@ export const partnershipTiers: PartnershipTier[] = [
     id: "official",
     name: "OFFICIAL PARTNER",
     description:
-      "Lead stakeholder tier. Joint naming rights, prominent delegation jersey placement, and national press leadership.",
+      "Engagement with relevant government, vocational education, disability inclusion, and industry stakeholders.",
     benefits: [
       "Primary logo on all delegation apparel",
       "Keynote address at national send-off",

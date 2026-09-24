@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 
 export function Participants() {
   const validStories = stories.filter((story) => story.image.src !== "/images/2023/metz-2023-delegation-01.webp");
-  return <section id="champions" className="scroll-mt-24 bg-white py-20 lg:py-28"><div className="container-site"><div className="mx-auto max-w-3xl text-center"><SectionHeading eyebrow="Participant spotlights" title="Meet the Champions" description="Dedicated professionals proving vocational mastery and breaking stereotypes on the world stage." /></div>  <div className="mt-12 space-y-8">
+  return <section id="champions" className="scroll-mt-24 bg-white py-20 lg:py-28"><div className="container-site"><div className="mx-auto max-w-3xl text-center"><SectionHeading eyebrow="METZ 2023 DELEGATION" title="The Champions Who Made History" description="Seven participants represented Bangladesh at the 10th International Abilympics in Metz, returning with two international bronze medals and a story of skill, determination, and possibility." /></div>  <div className="mt-12 space-y-8">
     {participants.map((person, index) => {
       const imageFirst = index % 2 === 0;
       return (

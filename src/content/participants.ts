@@ -23,8 +23,8 @@ export const participants: Participant[] = [
     bio: "A seasoned media professional representing Bangladesh in the Media – Publishing category. With over a decade of experience in television and digital media, Joshim brings technical expertise, creativity, and determination to the international stage.",
     quote:
       "Disability is not the definition of a person's future. Mastery in technical craft gives us an equal voice anywhere in the world.",
-    sponsorCtaLabel: "Representing Skills. Inspiring Inclusion. Joshim",
-    sponsorCtaHref: "https://joshimdiganta.pro/",
+    sponsorCtaLabel: "Sponsor Training Gear for Joshim",
+    sponsorCtaHref: "https://abilympics2027.com/en/skills-categories/media/publishing/",
     image: {
       src: "/images/2023/joshim-2023.webp",
       alt: "Helsinki 2027 Campaign Poster for Candidate Joshim",

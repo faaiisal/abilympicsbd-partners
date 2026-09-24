@@ -24,7 +24,7 @@ export function Participants() {
             <p className="mt-1 text-sm font-semibold text-brand-green">{person.discipline}</p>
             <p className="mt-5 text-sm leading-7 text-slate-600">{person.bio}</p>
             <blockquote className={`mt-5 rounded-lg border border-slate-200 border-l-4 bg-white px-4 py-3 text-sm italic leading-6 text-slate-700 ${person.quoteAccent}`}>“{person.quote}”</blockquote>
-            <a href={person.sponsorCtaHref} target="_blank"  className={`mt-6 inline-block text-xs font-black uppercase tracking-wider underline underline-offset-4 ${person.ctaColor}`}>{person.sponsorCtaLabel} →</a>
+            <a href={person.sponsorCtaHref} target="_blank"   className={`mt-6 inline-block text-xs font-black uppercase tracking-wider underline underline-offset-4 ${person.ctaColor}`}>{person.sponsorCtaLabel} →</a>
           </div>
         </article>
       );

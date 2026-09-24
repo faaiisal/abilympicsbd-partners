@@ -17,14 +17,14 @@ import type { Participant } from "@/types/content";
 export const participants: Participant[] = [
   {
     id: "joshim",
-    name: "Joshim",
+    name: "JOSHIM AHMMED DIGANTA",
     location: "Dhaka, Bangladesh",
-    discipline: "Professional Technology & Digital Craftsmanship",
-    bio: "A journey rooted in technical precision, continuous bootcamp training, and unyielding ambition. Joshim represents the next vanguard of Bangladeshi digital talent preparing for rigorous international evaluation.",
+    discipline: "Media – Publishing | Team Bangladesh",
+    bio: "A seasoned media professional representing Bangladesh in the Media – Publishing category. With over a decade of experience in television and digital media, Joshim brings technical expertise, creativity, and determination to the international stage.",
     quote:
       "Disability is not the definition of a person's future. Mastery in technical craft gives us an equal voice anywhere in the world.",
-    sponsorCtaLabel: "Sponsor Training Gear for Joshim",
-    sponsorCtaHref: "https://partners.epyra.agency",
+    sponsorCtaLabel: "Representing Skills. Inspiring Inclusion. Joshim",
+    sponsorCtaHref: "https://joshimdiganta.pro/",
     image: {
       src: "/images/2023/joshim-2023.webp",
       alt: "Helsinki 2027 Campaign Poster for Candidate Joshim",

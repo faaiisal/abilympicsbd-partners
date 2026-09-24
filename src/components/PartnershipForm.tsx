@@ -40,9 +40,11 @@ export function PartnershipForm() {
       setStatus("success");
       event.currentTarget.reset();
     } catch {
-      setErrorMessage("Network error. Please check your connection and try again.");
-      setStatus("error");
-    }
+  setErrorMessage(
+    "We couldn't submit your inquiry right now. Please try again in a moment."
+  );
+  setStatus("error");
+}
   }
 
   const isSubmitting = status === "submitting";

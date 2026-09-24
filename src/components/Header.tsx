@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { tickerItems } from "@/content";
 import { AccessibilityBar } from "./AccessibilityBar";
@@ -21,30 +20,16 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   /*
-   * Sticky header is desktop-only.
-   * 1024px and below:
-   * - No sticky header
-   * - No fixed header
-   * - Normal page scrolling
+   * Sticky header:
+   * All devices:
+   * - Normal initially
+   * - Becomes fixed after scrolling
+   *
+   * Accessibility bar and ticker remain desktop-only at 1025px+.
    */
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1025px)");
-
     const handleScroll = () => {
-      if (mediaQuery.matches) {
-        setIsScrolled(window.scrollY > 96);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    const handleViewportChange = () => {
-      if (mediaQuery.matches) {
-        handleScroll();
-        setIsMenuOpen(false);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 40);
     };
 
     handleScroll();
@@ -53,11 +38,8 @@ export function Header() {
       passive: true,
     });
 
-    mediaQuery.addEventListener("change", handleViewportChange);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      mediaQuery.removeEventListener("change", handleViewportChange);
     };
   }, []);
 
@@ -100,6 +82,8 @@ export function Header() {
   }
 
   function scrollToTop() {
+    closeMenu();
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -120,77 +104,73 @@ export function Header() {
           OFFICIAL UPDATES TICKER
           Desktop only: 1025px+
       ============================================================ */}
-      {/* Official Updates Ticker — desktop only */}
-<aside
-  aria-label="Official Updates Ticker"
-  className="hidden overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white min-[1025px]:block"
->
-  <div className="flex w-full items-center">
-    {/* Ticker label */}
-    <div className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider shadow-sm">
-      <span
-        className="h-2 w-2 animate-pulse rounded-full bg-white"
-        aria-hidden="true"
-      />
-      Official Briefing
-    </div>
-
-    {/* Ticker viewport */}
-    <div className="relative ml-4 min-w-0 flex-1 overflow-hidden">
-      <div className="ticker-track flex w-max whitespace-nowrap text-xs font-medium text-slate-300 sm:text-sm">
-        {/* Original ticker */}
-        <div className="flex shrink-0 items-center">
-          {tickerItems.map((item, index) => (
+      <aside
+        aria-label="Official Updates Ticker"
+        className="hidden overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white min-[1025px]:block"
+      >
+        <div className="flex w-full items-center">
+          {/* Ticker label */}
+          <div className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider shadow-sm">
             <span
-              key={`ticker-${index}`}
-              className="flex shrink-0 items-center"
-            >
-              <span className="mx-6">{item}</span>
+              className="h-2 w-2 animate-pulse rounded-full bg-white"
+              aria-hidden="true"
+            />
+            Official Briefing
+          </div>
 
-              <span
-                className="text-emerald-400"
+          {/* Ticker viewport */}
+          <div className="relative ml-4 min-w-0 flex-1 overflow-hidden">
+            <div className="ticker-track flex w-max whitespace-nowrap text-xs font-medium text-slate-300 sm:text-sm">
+              {/* Original ticker */}
+              <div className="flex shrink-0 items-center">
+                {tickerItems.map((item, index) => (
+                  <span
+                    key={`ticker-${index}`}
+                    className="flex shrink-0 items-center"
+                  >
+                    <span className="mx-6">{item}</span>
+
+                    <span
+                      className="text-emerald-400"
+                      aria-hidden="true"
+                    >
+                      •
+                    </span>
+                  </span>
+                ))}
+              </div>
+
+              {/* Duplicate for seamless loop */}
+              <div
+                className="flex shrink-0 items-center"
                 aria-hidden="true"
               >
-                •
-              </span>
-            </span>
-          ))}
-        </div>
+                {tickerItems.map((item, index) => (
+                  <span
+                    key={`ticker-copy-${index}`}
+                    className="flex shrink-0 items-center"
+                  >
+                    <span className="mx-6">{item}</span>
 
-        {/* Duplicate for seamless loop */}
-        <div
-          className="flex shrink-0 items-center"
-          aria-hidden="true"
-        >
-          {tickerItems.map((item, index) => (
-            <span
-              key={`ticker-copy-${index}`}
-              className="flex shrink-0 items-center"
-            >
-              <span className="mx-6">{item}</span>
-
-              <span
-                className="text-emerald-400"
-                aria-hidden="true"
-              >
-                •
-              </span>
-            </span>
-          ))}
+                    <span
+                      className="text-emerald-400"
+                      aria-hidden="true"
+                    >
+                      •
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</aside>
+      </aside>
 
       {/* ============================================================
           MAIN HEADER
 
-          Desktop 1025px+:
-          normal → scroll → fixed/sticky
-
-          Tablet/Mobile <=1024px:
-          always normal / non-sticky
+          ALL DEVICES:
+          normal → scroll → fixed
       ============================================================ */}
       <header
         className={
@@ -203,9 +183,12 @@ export function Header() {
           {/* ========================================================
               BRAND / LOGO
           ======================================================== */}
-          <Link
+          <a
             href="/"
-            onClick={closeMenu}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToTop();
+            }}
             className="flex min-w-0 shrink-0 items-center gap-2 rounded-lg p-1 sm:gap-3"
             aria-label="Abilympics Bangladesh home"
           >
@@ -233,7 +216,7 @@ export function Header() {
                 Helsinki, Finland • 10–13 May 2027
               </span>
             </span>
-          </Link>
+          </a>
 
           {/* ========================================================
               DESKTOP NAVIGATION
@@ -305,27 +288,21 @@ export function Header() {
                   {/* Top line */}
                   <span
                     className={`block h-0.5 w-5 origin-center bg-current transition-transform duration-200 ${
-                      isMenuOpen
-                        ? "translate-y-2 rotate-45"
-                        : ""
+                      isMenuOpen ? "translate-y-2 rotate-45" : ""
                     }`}
                   />
 
                   {/* Middle line */}
                   <span
                     className={`block h-0.5 w-5 bg-current transition-opacity duration-200 ${
-                      isMenuOpen
-                        ? "opacity-0"
-                        : "opacity-100"
+                      isMenuOpen ? "opacity-0" : "opacity-100"
                     }`}
                   />
 
                   {/* Bottom line */}
                   <span
                     className={`block h-0.5 w-5 origin-center bg-current transition-transform duration-200 ${
-                      isMenuOpen
-                        ? "-translate-y-2 -rotate-45"
-                        : ""
+                      isMenuOpen ? "-translate-y-2 -rotate-45" : ""
                     }`}
                   />
                 </span>
@@ -360,29 +337,29 @@ export function Header() {
       </header>
 
       {/* ============================================================
-          DESKTOP SPACER
+          HEADER SPACER
 
-          Only appears after desktop header becomes fixed.
-          Prevents layout jump.
+          Prevents layout jump after header becomes fixed.
+          Applies to ALL DEVICES.
       ============================================================ */}
       {isScrolled && (
         <div
           aria-hidden="true"
-          className="hidden h-20 min-[1025px]:block"
+          className="h-20"
         />
       )}
 
       {/* ============================================================
           BACK TO TOP
 
-          Desktop sticky state only.
+          Visible whenever header is sticky.
       ============================================================ */}
       {isScrolled && (
         <button
           type="button"
           onClick={scrollToTop}
           aria-label="Back to top"
-          className="fixed bottom-6 right-5 z-[90] hidden h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-gradient-to-tr from-[#005a40] via-brand-green to-emerald-400 text-white shadow-lg shadow-emerald-950/40 transition-all duration-200 hover:scale-105 focus-visible:outline-2 focus-visible:outline-emerald-400 focus-visible:outline-offset-2 min-[1025px]:flex sm:bottom-8 sm:right-8 sm:h-12 sm:w-12"
+          className="fixed bottom-6 right-5 z-[90] flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-gradient-to-tr from-[#005a40] via-brand-green to-emerald-400 text-white shadow-lg shadow-emerald-950/40 transition-all duration-200 hover:scale-105 focus-visible:outline-2 focus-visible:outline-emerald-400 focus-visible:outline-offset-2 sm:bottom-8 sm:right-8 sm:h-12 sm:w-12"
         >
           <svg
             aria-hidden="true"

@@ -13,8 +13,8 @@ export function Media() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading
             eyebrow="National press"
-            title="In the Media"
-            description="Coverage from prepared media references highlighting Bangladesh’s vocational journey."
+            title="Media & Stories"
+            description="Stories and coverage highlighting Bangladesh’s Abilympics journey, participants, and achievements."
           />
         </div>
         <h2 id="media-title" className="sr-only">
@@ -32,7 +32,7 @@ export function Media() {
                 <h3 className="mt-3 text-base">{article.headline}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{article.excerpt}</p>
               </div>
-              <span className={`mt-6 border-t border-slate-200 pt-4 text-xs font-bold ${article.accentColor}`}>Prepared coverage reference</span>
+              <span className={`mt-6 border-t border-slate-200 pt-4 text-xs font-bold ${article.accentColor}`}>Nagorik TV — Television Feature</span>
             </article>
           ))}
         </div>

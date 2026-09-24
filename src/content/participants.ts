@@ -37,9 +37,9 @@ export const participants: Participant[] = [
   },
   {
     id: "jerin",
-    name: "Jerin",
+    name: "Tusabber MUNTAHA",
     location: "Bangladesh Cohort",
-    discipline: "Creative Media, Office Administration & Computing",
+    discipline: "Word Processing | Team Bangladesh",
     bio: "Demonstrating exceptional speed, layout aesthetic, and error-free execution across advanced media production suites. Jerin is preparing relentlessly to uphold Bangladesh's reputation in Helsinki.",
     quote:
       "When you focus on skill, every challenge transforms into a milestone. Representing Bangladesh makes every hour of practice worthwhile.",

@@ -1,59 +1,46 @@
 import type { MediaArticle } from "@/types/content";
 
 /**
- * Media coverage items — publications that have covered Abilympics Bangladesh.
+ * Media coverage items.
  *
- * SOURCE: Stitch HTML (stitch-code-desktop.html, stitch-code-mobile.html)
- * The publication names "The Daily Star" and "Dhaka Tribune" appear in the Stitch HTML.
- * However, the article URLs are NOT confirmed — they are placeholders in the design.
- *
- * TODO: Provide real article URLs before Phase 7 implementation.
- * TODO: Confirm additional media coverage items beyond these 2.
- *
- * RULE: Do not invent article content or claim coverage that isn't confirmed.
+ * RULE:
+ * Only confirmed media/features should be listed here.
  */
 export const mediaArticles: MediaArticle[] = [
   {
-    id: "daily-star-2023",
-    publication: "The Daily Star",
+    id: "nagorik-tv-2023",
+    publication: "Nagorik TV",
     headline:
-      "Bangladesh Competitors Bring Home Historic Glory from Metz Abilympics",
+      "Joshim’s Journey to the International Abilympics",
     excerpt:
-      "High-level appreciation from across the ICT sector as youth proved vocational equality on European soil.",
+      "A special television feature highlighting Joshim’s journey, determination, and experience as a member of Bangladesh’s Abilympics delegation.",
     date: "April 2023",
-    url: null, // TODO: Replace with confirmed article URL
+    url: "https://drive.google.com/drive/u/6/home",
     accentColor: "text-emerald-400",
   },
   {
-    id: "dhaka-tribune-2023",
-    publication: "Dhaka Tribune",
+    id: "international-abilympics-2023",
+    publication: "International Abilympics Coverage",
     headline:
-      "Breaking Barriers: How Vocational Inclusion Drives Bangladesh's ESG Goals",
+      "International Stories from Abilympics 2023",
     excerpt:
-      "Reframing corporate social investment from charity to economic enablement and certified skills excellence.",
+      "Stories and participant features highlighting the Abilympics community and vocational inclusion across countries.",
     date: "May 2023",
-    url: null, // TODO: Replace with confirmed article URL
+    url: "https://drive.google.com/drive/u/6/home",
     accentColor: "text-sky-400",
   },
 ];
 
 /**
  * Social / live broadcast video configuration.
- * Source: Stitch HTML + USER-provided URLs.
  */
 export const broadcastVideo = {
-  /**
-   * Facebook Reel for the "Follow Team Bangladesh Live" section.
-   * NOTE: Facebook embed has limitations — see video strategy in migration plan.
-   * The reelId is extracted from the confirmed URL.
-   */
   facebook: {
     reelId: "2245506865990513",
     url: "https://www.facebook.com/reel/2245506865990513",
     title: "Follow Team Bangladesh Live — Abilympics Bangladesh Journey",
     description:
       "Stay connected with live athlete training sessions, candidate selection updates, and official press briefings across our streaming networks.",
-    /** Used as fallback image when Facebook embed is unavailable */
     fallbackImage: {
       src: "/images/gallery/gallery-16.webp",
       alt: "Team Bangladesh training session preview",

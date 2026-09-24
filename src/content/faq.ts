@@ -14,7 +14,7 @@ export const faqItems: FAQItem[] = [
     id: "faq-what-is-abilympics",
     question: "What is the International Abilympics?",
     answer:
-      "The International Abilympics is the quadrennial \"Olympics of Abilities\" — the premier world skills competition for persons with disabilities, demonstrating workplace parity, digital trade mastery, and vocational leadership across 40+ disciplines.",
+      "Abilympics is the world's largest international vocational skills competition for persons with disabilities, promoting professional excellence, inclusion, and equal opportunity. The concept originated in Japan in 1972, drawing inspiration from both the WorldSkills competitions and the Paralympic Games — a contraction of “abilities” and “olympics.”",
   },
   {
     id: "faq-what-is-helsinki-2027",
@@ -56,6 +56,6 @@ export const faqItems: FAQItem[] = [
     id: "faq-contact",
     question: "How do I contact the Abilympics Bangladesh secretariat?",
     answer:
-      "You can reach the official secretariat at secretariat@abilympicsbd.org, or submit a partnership inquiry through the form on this page. Our direct desk is open for institutional inquiries, media briefings, and sponsorship discussions.",
+      "For partnership, sponsorship, media, or institutional inquiries, you can submit the partnership inquiry form on this page. Your message will be sent directly to the Abilympics Bangladesh secretariat at abilympicsbd@gmail.com, and you will receive an email confirmation after submitting the form. You can also contact the secretariat directly at abilympicsbd@gmail.com if you prefer to email us.",
   },
 ];

@@ -37,7 +37,7 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mb-4 mt-6 max-w-3xl text-xl font-semibold tracking-tight text-emerald-100 sm:text-2xl">
-            Empowering Ability. Inspiring Excellence. Representing Bangladesh.
+            Empowering Ability. Inspiring Excellence. Skills. Representing Bangladesh.
           </p>
 
           <p className="mx-auto mb-10 max-w-2xl text-base font-light leading-relaxed text-slate-300 sm:text-lg">

@@ -14,7 +14,7 @@ export function AccessibilityBar() {
   }, [largeText, highContrast, reducedMotion]);
 
   return (
-    <div className="bg-slate-900 text-slate-300 text-xs py-1.5 px-4 sm:px-8 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3">
+    <div className="hidden bg-slate-900 text-slate-300 text-xs py-1.5 px-4 sm:px-8 border-b border-slate-800 flex-wrap items-center justify-between gap-3 min-[1025px]:flex">
       {/* LEFT — label */}
       <span className="inline-flex items-center gap-1 font-semibold text-emerald-400">
         <span className="material-symbols-outlined" style={{ fontSize: '15px' }} aria-hidden="true">accessibility_new</span>
@@ -72,4 +72,3 @@ export function AccessibilityBar() {
     </div>
   );
 }
-

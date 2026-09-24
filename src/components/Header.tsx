@@ -35,7 +35,7 @@ export function Header() {
   return (
     <>
       <AccessibilityBar />
-      <aside aria-label="Official Updates Ticker" className="overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white">
+      <aside aria-label="Official Updates Ticker" className="hidden overflow-hidden border-b border-slate-800 bg-brand-charcoal py-2 text-xs font-semibold text-white min-[1025px]:block">
         <div className="flex w-full items-center">
           {/* Red badge */}
           <div className="ml-4 flex shrink-0 items-center gap-1.5 rounded bg-brand-red px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider shadow-sm">

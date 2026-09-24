@@ -8,7 +8,7 @@ const socialLinks = [
   },
   {
     label: "X",
-    href: "#",
+    href: "https://x.com/abilympicsbd",
     icon: "x",
   },
   {

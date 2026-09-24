@@ -53,7 +53,7 @@ export function PartnershipForm() {
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading dark eyebrow="Connect with secretariat" title="Join the Mission to Helsinki 2027" description="Direct portal for corporate sponsors, media allies, technology providers, and academic institutions." />
           <h2 id="contact-title" className="sr-only">Partnership inquiry form</h2>
-          <a href="https://partners.epyra.agency" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-green px-8 py-3.5 text-sm font-black uppercase tracking-wider text-white">Become a Partner <span className="material-symbols-outlined" style={{ fontSize: '18px' }} aria-hidden="true">arrow_outward</span></a>
+          <a href="#contact" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-green px-8 py-3.5 text-sm font-black uppercase tracking-wider text-white">Become a Partner <span className="material-symbols-outlined" style={{ fontSize: '18px' }} aria-hidden="true">arrow_outward</span></a>
         </div>
 
         {/* Success state */}

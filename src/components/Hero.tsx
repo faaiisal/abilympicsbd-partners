@@ -48,7 +48,7 @@ export function Hero() {
 
           <div className="mx-auto flex max-w-md flex-col items-center justify-center gap-4 sm:max-w-none sm:flex-row">
             <a
-              href="https://partners.epyra.agency"
+              href="#contact"
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-green px-8 py-4 text-sm font-black uppercase tracking-wider text-white shadow-2xl hover:bg-brand-green-light sm:w-auto"

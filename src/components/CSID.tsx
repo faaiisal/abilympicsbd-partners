@@ -23,16 +23,25 @@ export function CSID() {
 
           <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
             <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-forest text-xl font-black tracking-tight text-white shadow-sm">
-                CSID
-              </div>
-              <div>
-                <h3 className="text-base">Centre for Services and Information on Disability</h3>
-                <p className="text-xs text-slate-500">
-                  Pioneering Disability Inclusion &amp; Vocational Rights since 1997
-                </p>
-              </div>
-            </div>
+  <div className="flex h-14 w-14 shrink-0 items-center justify-center  rounded-full  shadow-sm">
+    <Image
+      src="/images/institutional/csid-representative-logo.webp"
+      alt="CSID logo"
+      width={120}
+      height={120}
+      className="h-full w-full object-contain"
+    />
+  </div>
+
+  <div>
+    <h3 className="text-base">
+      Centre for Services and Information on Disability
+    </h3>
+    <p className="text-xs text-slate-500">
+      Pioneering Disability Inclusion &amp; Vocational Rights since 1997
+    </p>
+  </div>
+</div>
             <p className="text-xs leading-relaxed text-slate-600">
               Coordinating candidate trials, technical bootcamps, international protocol
               accreditation, and corporate career transition for participating youth across Bangladesh.

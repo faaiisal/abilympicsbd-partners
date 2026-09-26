@@ -11,10 +11,11 @@ export function PartnershipForm() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const form = event.currentTarget;
     setStatus("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(form);
 
     try {
       const response = await fetch("/api/partnership", {
@@ -22,29 +23,45 @@ export function PartnershipForm() {
         body: formData,
       });
 
+      const responseText = await response.text();
+      console.log("[PartnershipForm] Response text:", responseText);
+
       let json: { error?: string } = {};
       try {
-        json = await response.json();
-      } catch {
-        setErrorMessage("The server returned an invalid response. Please try again.");
+        json = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error(
+          "[PartnershipForm] Failed to parse JSON response:",
+          parseError,
+          responseText,
+        );
+        setErrorMessage(
+          responseText || "The server returned an invalid response. Please try again.",
+        );
         setStatus("error");
         return;
       }
 
       if (!response.ok) {
+        console.error(
+          "[PartnershipForm] Server returned error status:",
+          response.status,
+          json,
+        );
         setErrorMessage(json.error ?? "Something went wrong. Please try again.");
         setStatus("error");
         return;
       }
 
       setStatus("success");
-      event.currentTarget.reset();
-    } catch {
-  setErrorMessage(
-    "We couldn't submit your inquiry right now. Please try again in a moment."
-  );
-  setStatus("error");
-}
+      form.reset();
+    } catch (err) {
+      console.error("[PartnershipForm] Network or client error:", err);
+      setErrorMessage(
+        "We couldn't submit your inquiry right now. Please try again in a moment.",
+      );
+      setStatus("error");
+    }
   }
 
   const isSubmitting = status === "submitting";
@@ -53,7 +70,7 @@ export function PartnershipForm() {
     <section id="contact" aria-labelledby="contact-title" className="scroll-mt-24 bg-brand-charcoal py-20 text-white lg:py-28">
       <div className="container-site">
         <div className="mx-auto max-w-3xl text-center">
-          <SectionHeading dark eyebrow="Connect with secretariat" title="Join the Mission to Helsinki 2027" description="Direct portal for corporate sponsors, media allies, technology providers, and academic institutions." />
+          <SectionHeading dark eyebrow="Connect with the Secretariat" title="Partner with Team Bangladesh for Helsinki 2027" description="Join us in empowering Bangladeshi participants with disabilities to compete, excel, and represent the nation on the international stage. We welcome corporate sponsors, media partners, technology providers, academic institutions, and organizations committed to inclusive opportunity." />
           <h2 id="contact-title" className="sr-only">Partnership inquiry form</h2>
           <a href="#contact" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-green px-8 py-3.5 text-sm font-black uppercase tracking-wider text-white">Become a Partner <span className="material-symbols-outlined" style={{ fontSize: '18px' }} aria-hidden="true">arrow_outward</span></a>
         </div>

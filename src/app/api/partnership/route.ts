@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const runtime = "nodejs";
+export const maxDuration = 30;
+
 const SECRETARIAT_EMAIL = "abilympicsbd@gmail.com";
 const FROM_NAME = "Abilympics Bangladesh";
 const FROM_ADDRESS = "noreply@epyra.agency";
@@ -178,6 +181,12 @@ function secretariatHtml(p: InquiryPayload): string {
                 </div>
               </div>
 
+              <div style="margin-top:24px;padding:16px 20px;background:#ecfdf5;border-left:4px solid #006a4e;border-radius:8px;">
+                <p style="margin:0;color:#065f46;font-size:13px;line-height:1.6;">
+                  Reply directly to this email to respond to <strong>${name}</strong> at <a href="mailto:${email}" style="color:#006a4e;font-weight:700;text-decoration:none;">${email}</a>.
+                </p>
+              </div>
+
               <div style="margin-top:28px;padding-top:20px;border-top:1px solid #e5e7eb;">
                 <p style="margin:0;color:#9ca3af;font-size:12px;line-height:1.6;">
                   This inquiry was submitted through the Abilympics Bangladesh partnership website.
@@ -321,28 +330,27 @@ export async function POST(request: NextRequest) {
   const resend = new Resend(resendApiKey);
 
   try {
-    const [notifyResult, confirmResult] = await Promise.all([
-      resend.emails.send({
+    const batchResult = await resend.batch.send([
+      {
         from: `${FROM_NAME} <${FROM_ADDRESS}>`,
         to: [SECRETARIAT_EMAIL],
         replyTo: payload.email,
         subject: `[Partnership Inquiry] ${payload.interest} — ${payload.organization}`,
         html: secretariatHtml(payload),
-      }),
-
-      resend.emails.send({
+      },
+      {
         from: `${FROM_NAME} <${FROM_ADDRESS}>`,
         to: [payload.email],
         subject:
           "We received your inquiry — Abilympics Bangladesh Helsinki 2027",
         html: confirmationHtml(payload),
-      }),
+      },
     ]);
 
-    if (notifyResult.error) {
+    if (batchResult.error) {
       console.error(
-        "[/api/partnership] Resend notification error:",
-        notifyResult.error,
+        "[/api/partnership] Resend batch error:",
+        batchResult.error,
       );
 
       return NextResponse.json(
@@ -351,22 +359,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (confirmResult.error) {
-      console.error(
-        "[/api/partnership] Resend confirmation error:",
-        confirmResult.error,
-      );
-
-      return NextResponse.json(
-        { error: "Failed to send inquiry. Please try again." },
-        { status: 502 },
-      );
-    }
-
-    console.info("[/api/partnership] Emails sent:", {
-      notify: notifyResult.data?.id,
-      confirm: confirmResult.data?.id,
-    });
+    console.info("[/api/partnership] Emails sent via batch:", batchResult.data);
 
     return NextResponse.json(
       { success: true },
